@@ -1,14 +1,17 @@
 <template>
-  <div id="app">
+  <div id="app" class="">
    <landing-page/>
+   <!-- <Second/> -->
   </div>
 </template>
 <script>
 import LandingPage from "./views/Landing-Page.vue";
+import Second from "./views/Second-Page.vue";
 export default {
   name:'app',
    components:{
       LandingPage,
+      Second
    }
 }
 </script>
@@ -19,6 +22,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow-x: hidden;
 }
 
 nav {
