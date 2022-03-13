@@ -1,23 +1,32 @@
 <template>
   <div id="app" class="">
    <landing-page/>
-   <!-- <Second/> -->
+   <Second/>
+   <About/>
+   <Theard/>
+   <case-study/>
   </div>
 </template>
 <script>
 import LandingPage from "./views/Landing-Page.vue";
 import Second from "./views/Second-Page.vue";
+import Theard from "./views/Theard-Page.vue";
+import About from "./views/About.vue";
+import CaseStudy from "./views/Case-Study.vue";
 export default {
   name:'app',
    components:{
       LandingPage,
-      Second
+      Second,
+      About,
+      Theard,
+      CaseStudy,
    }
 }
 </script>
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

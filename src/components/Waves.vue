@@ -1,5 +1,5 @@
 <template>
-  <div class>
+  <div class="main">
     <!--Hey! This is the original version
     of Simple CSS Waves-->
 
@@ -37,10 +37,10 @@ c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3
           </g>
         </svg>
         <div class="w-4 flex flex-col absolute top-32 left-12 opacity-100">
-          <i class="fa fa-instagram" id="apple"></i>
-          <i class="fa fa-linkedin" id="twitter"></i>
-          <i class="fa fa-github-square github" id="github"></i>
-          <i class="fa fa-facebook-square" id="facebook"></i>
+        <a href="https://www.instagram.com/zakaria.megnioui/"  target="_blank">  <i class="fa fa-instagram" id="apple"></i></a>
+         <a href="https://www.linkedin.com/in/valiiri/" target="_blank"><i class="fa fa-linkedin" id="twitter"></i></a> 
+        <a href="https://github.com/ZakariaMegnioui" target="_blank"> <i class="fa fa-github-square github" id="github"></i></a> 
+         <a href="https://www.facebook.com/profile.php?id=100078127189264" target="_blank"><i class="fa fa-facebook-square" id="facebook"></i></a> 
         </div>
         <div class="text-left absolute left-48 top-28">
           <p class="font-bold mb-1" style="color:#139487 ">Hi, my name is</p>
