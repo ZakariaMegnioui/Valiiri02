@@ -2,9 +2,10 @@
   <div id="app" class="">
    <landing-page/>
    <Second/>
+    <Services/>
    <About/>
    <Theard/>
-   <case-study/>
+  
   </div>
 </template>
 <script>
@@ -12,7 +13,7 @@ import LandingPage from "./views/Landing-Page.vue";
 import Second from "./views/Second-Page.vue";
 import Theard from "./views/Theard-Page.vue";
 import About from "./views/About.vue";
-import CaseStudy from "./views/Case-Study.vue";
+import Services from "./views/Services.vue";
 export default {
   name:'app',
    components:{
@@ -20,7 +21,7 @@ export default {
       Second,
       About,
       Theard,
-      CaseStudy,
+      Services,
    }
 }
 </script>

@@ -1,0 +1,146 @@
+:root {
+    --red: #100355;
+    --cyan: #139487;
+    --orange: #D08101;
+    --blue: #1a6a8d;
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(230, 3%, 41%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+.case {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #efefef;
+   min-height: 120vh;
+    position: relative;
+}
+.case .SER{
+ font-size: 170PX;
+ opacity: 0.1;
+ position: absolute;
+ bottom:  20;
+ z-index: -0;
+}
+.case .attribution { 
+    font-size: 11px; text-align: center; 
+}
+.case .attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+.case h1:first-of-type {
+    font-weight: var(--weight1);
+    color: var(--varyDarkBlue);
+
+}
+
+.case h1:last-of-type {
+    color: var(--varyDarkBlue);
+}
+
+@media (max-width: 400px) {
+    .case h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.case .header {
+    text-align: start;
+    line-height: 0.8;
+    margin-bottom: 50px;
+  
+   
+}
+
+.case .header h1 {
+    margin: 0 auto;
+    line-height: 2;
+    color: var(--grayishBlue);
+}
+
+
+.case .box p {
+    color: var(--grayishBlue);
+}
+
+
+.case .box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;  
+    z-index: 2;
+    
+}
+
+img {
+    float: right;
+    height: 130px;
+    width: 130px;
+   
+}
+
+.case p{
+    margin-top: 10px;
+}
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+.cyan {
+    border-top: 3px solid var(--cyan);
+}
+.red {
+    border-top: 3px solid var(--red);
+}
+.blue {
+    border-top: 3px solid var(--blue);
+}
+.orange {
+    border-top: 3px solid var(--orange);
+}
+
+h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+}
+
+
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-down {
+        position: relative;
+        top: 150px;
+    }
+    .box {
+        width: 20%;
+     
+    }
+  .case  .header p {
+        width: 30%;
+    }
+    
+}

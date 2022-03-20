@@ -2,7 +2,7 @@
   
     <!-- About section start -->
 <section class="about-section ">
-      <h1>Aboute</h1>
+      <h1 class="big-title">Aboute</h1>
   <div class="container">
 
     <!-- Social Icons End -->
