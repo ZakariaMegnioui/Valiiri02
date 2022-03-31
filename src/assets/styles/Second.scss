@@ -65,12 +65,16 @@ a{
 
 }
 .bottom-section{
-  background: #139487;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-   
-  
-  
+  background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.top-section .circel{
+  background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .section h1{
   font-size: 200px;
@@ -99,13 +103,13 @@ a{
  
 }
 .content-theme-light h1{
-  color:#062930;
+ color:  #0f0c29; 
   text-shadow: 0 20px 40px rgba(0,0,0,.5);
  
 
 }
 .content-theme-light p,
 .content-theme-light a{
-  color:#062930;
+ color:  #0f0c29; 
   width: 50%;
 }

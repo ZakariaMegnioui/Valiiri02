@@ -37,17 +37,17 @@ c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3
           </g>
         </svg>
         <div class="w-4 flex flex-col absolute top-32 left-12 opacity-100">
-        <a href="https://www.instagram.com/zakaria.megnioui/"  target="_blank">  <i class="fa fa-instagram" id="apple"></i></a>
-         <a href="https://www.linkedin.com/in/valiiri/" target="_blank"><i class="fa fa-linkedin" id="twitter"></i></a> 
-        <a href="https://github.com/ZakariaMegnioui" target="_blank"> <i class="fa fa-github-square github" id="github"></i></a> 
-         <a href="https://www.facebook.com/profile.php?id=100078127189264" target="_blank"><i class="fa fa-facebook-square" id="facebook"></i></a> 
+        <a href="https://www.instagram.com/zakaria.megnioui/"  target="_blank">  <i class="fa fa-instagram duration-500 ease-in-out" id="apple"></i></a>
+         <a href="https://www.linkedin.com/in/valiiri/" target="_blank"><i class="fa fa-linkedin transition duration-500 ease-in-out" id="twitter"></i></a> 
+        <a href="https://github.com/ZakariaMegnioui" target="_blank" > <i class="fa fa-github-square github  duration-500 ease-in-out" id="github"></i></a> 
+         <a href="https://www.facebook.com/profile.php?id=100078127189264" target="_blank"><i class="fa fa-facebook-square duration-500 ease-in-out" id="facebook"></i></a> 
         </div>
         <div class="text-left absolute left-48 top-28">
           <p class="font-bold mb-1" style="color:#139487 ">Hi, my name is</p>
           
-          <h1 style="font-size:3rem " class="title text-gray-400" data-text="Zakaria Megnioui" >Zakaria Megnioui</h1>
+          <h1 style="font-size:2.7rem " class="title text-gray-400" data-text="Zakaria Megnioui" >Zakaria Megnioui</h1>
 
-          <h1 style="font-size:3rem" class="title text-gray-500">I build things for the web.</h1>
+          <h1 style="font-size:2.7rem" class="title text-gray-500">I build things for the web.</h1>
           <p
             class="font-bold text-gray-500 w-3/6 mt-1"
           >I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.</p>

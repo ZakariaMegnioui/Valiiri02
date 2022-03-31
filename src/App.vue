@@ -3,9 +3,10 @@
    <landing-page/>
    <Second/>
     <Services/>
+     
    <About/>
    <Theard/>
-  
+ <Work/>
   </div>
 </template>
 <script>
@@ -14,6 +15,7 @@ import Second from "./views/Second-Page.vue";
 import Theard from "./views/Theard-Page.vue";
 import About from "./views/About.vue";
 import Services from "./views/Services.vue";
+import Work from './views/Work.vue';
 export default {
   name:'app',
    components:{
@@ -22,6 +24,7 @@ export default {
       About,
       Theard,
       Services,
+      Work,
    }
 }
 </script>

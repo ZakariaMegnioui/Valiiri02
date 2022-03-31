@@ -3,10 +3,8 @@
 
 	 <section class="section top-section flex flex-col align-middle justify-center">
 		   <div class="circel h-80 w-80 rounded-full  absolute -top-5 right-0
-      " style="  background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-"></div>
- <div class="circel h-80 w-80 rounded-full absolute bottom-0 left-0" style="background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-"></div>
+      " ></div>
+ <div class="circel h-80 w-80 rounded-full absolute bottom-0 left-0" ></div>
     <div class="content-container content-theme-light ">
       <div class="content-inner">
         <div class="content-center">
@@ -40,6 +38,8 @@ export default {
 data() {
     return {
       open: false,
+    
+ 
     };
   },
   mounted(){
