@@ -3,10 +3,11 @@
    <landing-page/>
    <Second/>
     <Services/>
-     
+      <Qoutes/>
+
    <About/>
    <Theard/>
- <Work/>
+   <case-study/>
   </div>
 </template>
 <script>
@@ -15,7 +16,8 @@ import Second from "./views/Second-Page.vue";
 import Theard from "./views/Theard-Page.vue";
 import About from "./views/About.vue";
 import Services from "./views/Services.vue";
-import Work from './views/Work.vue';
+import Qoutes from './views/Qoutes.vue';
+import CaseStudy from './views/Case-Study.vue';
 export default {
   name:'app',
    components:{
@@ -24,7 +26,9 @@ export default {
       About,
       Theard,
       Services,
-      Work,
+      Qoutes,
+      CaseStudy,
+      CaseStudy,
    }
 }
 </script>
