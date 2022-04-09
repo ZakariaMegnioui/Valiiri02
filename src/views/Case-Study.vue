@@ -10,16 +10,15 @@
         </div>
       </div>
       <div class="details">
-        <div class="content">
+        <div class="content w-1/2">
           <h2 class="text-lg">
             {{project.title}}
             <br />
             <span class="text-base">{{project.domain}}</span>
           </h2>
-          <ul class="flex text-xs justify-between w-full">
-            <li>{{project.backend}}</li>
-            {{project.frontend}}
-            <li>{{project.css}}</li>
+          <ul class=" flex   text-xs justify-between w-full" >
+            <li v-for="( tech , i) in project.tech" :key="i">{{tech}}</li>   
+          
           </ul>
 
           <div class="social-icons">
@@ -120,33 +119,31 @@ export default {
       projects: [
         {
           title: "Royimmo",
-          domain: "Ecommerce website",
+          domain: "immobilier",
           main: "PR1.jpg",
           video: "roya.mp4",
           link: "https://royaimmo.ma/",
-          backend: "Laravel",
-          frontend: "Vue js",
-          css: "TailwindCss",
+          tech:['Laravel' , 'Vue JS' ,'tailwind' , 'element ui' , 'mysql'],
+
         },
         {
           title: "Ajicod",
-          domain: "Ecommerce website",
+          domain: "Development web",
           main: "PR2.jpg",
           video: "ajicod.mp4",
           link: "https://ajicod.com/en",
-          backend: "Laravel",
-          frontend: "' ' ",
-          css: "Bootstrap",
+          tech:['Laravel'  ,'bootstrap' , 'mysql'],
+
         },
         {
           title: "AWID Livraison",
-          domain: "Ecommerce website",
+          domain: "Delivery",
           main: "PR3.jpg",
           video: "awid.mp4",
           link: "https://awidlivraison.com/",
-          backend: "Laravel",
-          frontend: "Vue js",
-          css: "Bootstrap",
+          tech:['Laravel' , 'Vue JS' ,'tailwind' , 'element ui' , 'mysql'],
+
+  
         },
       ],
       others: [
@@ -164,7 +161,7 @@ export default {
             iconLink: "https://netflex-landing-page.netlify.app",
             icon: require("@/assets/icons/netflix.svg"),
             subtitle: "Tailwind 2022",
-            url: "#",
+            url: "https://github.com/ZakariaMegnioui/Netflix-landing-page",
           },
          
         ],
@@ -174,14 +171,14 @@ export default {
             iconLink: "",
             icon: require("@/assets/icons/spring.svg"),
             subtitle: "spring boot 2021",
-            url: "#",
+            url: "https://github.com/ZakariaMegnioui/spring-security-JWT",
           },
           {
             title: "Online Courses Dashboard with tailwindCSS",
             iconLink: "https://dashboard-tailwind3css.netlify.app",
             icon: require("@/assets/icons/dashboard.svg"),
             subtitle: "Tailwind 2022",
-            url: "#",
+            url: "https://github.com/ZakariaMegnioui/tailwind-Dashboard-online-courses",
           },
          
         ],
@@ -199,7 +196,7 @@ export default {
             iconLink: "https://youtub6tailwind.netlify.app",
             icon: require("@/assets/icons/youtube.svg"),
             subtitle: "tailwind CSS 2021",
-            url: "#",
+            url: "https://github.com/ZakariaMegnioui/youtube-clone",
           },
          
         ],
@@ -207,10 +204,10 @@ export default {
       more: [
         {
           title: " simple todo list with react js ",
-          iconLink: "toodo-lisyt.netlify.app",
+          iconLink: "https://toodo-lisyt.netlify.app",
           icon: require("@/assets/icons/todo.svg"),
           subtitle: "React js 2020",
-          url: "https://github.com/ZakariaMegnioui/Weather-Web-App",
+          url: "https://github.com/ZakariaMegnioui/todo-list-",
         },
        
         {
@@ -218,7 +215,7 @@ export default {
             iconLink: "https://movie-db-react-js.netlify.app/",
             icon: require("@/assets/icons/movie.svg"),
             subtitle: "React Js 2020",
-            url: "#",
+            url: "https://github.com/ZakariaMegnioui/Movie-Time",
           },
            {
             title: "Crud php app , php , mvc , mysql",
