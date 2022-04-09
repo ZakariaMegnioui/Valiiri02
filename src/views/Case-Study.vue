@@ -185,11 +185,11 @@ export default {
         [
           {
             title:
-              "Building a management system for livestock breeding and calculating productivity and genetic values ",
+              "Building a management system for livestock breeding and calculating productivity and genetic values  ",
             iconLink: "",
             icon: require("@/assets/icons/cow.svg"),
-            subtitle: "Laravel Vue js",
-            url: "#",
+            subtitle: "Laravel Vue js ",
+            url: "https://github.com/ZakariaMegnioui/Cow-management-System-",
           },
           {
             title: "clone a youtube page just using tailwind css",
