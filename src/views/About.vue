@@ -2,7 +2,10 @@
   
     <!-- About section start -->
 <section class="about-section ">
-      <h1 class="big-title">Aboute</h1>
+      <div class="big-title flex justify-between w-full">
+      <h1 class=" w-1/2 text-left">Aboute</h1>
+        <h1 class="w-1/2 text-right " style="color:#139487">02</h1>
+        </div>
   <div class="container">
 
     <!-- Social Icons End -->

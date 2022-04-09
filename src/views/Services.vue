@@ -1,6 +1,9 @@
 <template>
-  <div class="case">
-    <h1 class="SER transform -translate-y-12">Services</h1>
+  <div class="case"> <div class="SER transform -translate-y-12 flex justify-between w-full">
+        <h1 class=" w-1/2 text-left">Services</h1>
+        <h1 class="w-1/2 text-right " style="color:#139487">01</h1>
+  </div>
+
  <div class="wrapper">
   <ul class="background-shapes" >
    <li v-for="(item , i ) in shapes" :key="i" :class="'shape '+item"></li>

@@ -1,223 +1,251 @@
 <template>
   <div class="project">
-   
-<div class="c-magic-area c-magic-area--menu" data-target-class=".c-main-menu__link" data-tween-back="true" aria-hidden="true"></div>
-<div class="c-magic-area c-magic-area--content" data-target-class=".c-article__link" data-tween-back="false" aria-hidden="true"></div>
+    <div class="card h-72 w-2/5 relative" v-for="project in projects" :key="project.main">
+      <div class="imgBox">
+        <img :src="require(`@/assets/img/${project.main}`)" alt />
+        <div class="video">
+          <video autoplay muted loop id="bg">
+            <source :src="require(`@/assets/videos/${project.video}`)" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div class="details">
+        <div class="content">
+          <h2 class="text-lg">
+            {{project.title}}
+            <br />
+            <span class="text-base">{{project.domain}}</span>
+          </h2>
+          <ul class="flex text-xs justify-between w-full">
+            <li>{{project.backend}}</li>
+            {{project.frontend}}
+            <li>{{project.css}}</li>
+          </ul>
 
-<main id="page" class="o-page">
-  <header class="o-header">
-    <h1 class="c-logo"><a class="c-logo__link" href="https://frontend30.com" target="_blank">Ryan Yu</a></h1>
-    <nav class="c-main-menu" aria-labelledby="mainmenulabel">
-      <h2 id="mainmenulabel" class="u-visually-hidden">Main Menu</h2>
-      <ul class="c-main-menu__list">
-        <li><a class="c-main-menu__link" href="#">Home</a></li>
-        <li><a aria-current="page" class="is-magic-active c-main-menu__link" href="#">Portfolio</a></li>
-        <li><a class="c-main-menu__link" href="#">About</a></li>
-        <li><a class="c-main-menu__link" href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="o-main-section">
-    <h2 class="c-main-heading">Portfolio</h2>
-
-    <article class="c-article">
-      <a class="c-article__link" href="#">
-        <div>
-          <header>
-            <h3 class="c-article__heading">Ink transition with PNG sprite</h3>
-          </header>
-          <div class="c-article__content">
-            Animate images with ink transition in PNG sprite.
+          <div class="social-icons">
+            <a href="#">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a :href="project.link" target="_blank">
+              <i class aria-hidden="true">
+                <img class="h-6 w-6" :src="link" alt />
+              </i>
+            </a>
+            <a href="#">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
-        <div class="c-article__img-wrapper">
-          <img class="c-article__img" src="https://assets.codepen.io/204808/shin-yun-bok-ink.png" alt="Ink transition with PNG sprite" />
-        </div>
-      </a>
-    </article>
-
-    <article class="c-article">
-      <a class="c-article__link" href="#">
-        <div>
-          <header>
-            <h3 class="c-article__heading">Responsive Mondrian art with CSS grid</h3>
-          </header>
-          <div class="c-article__content">
-            Make a responsive Mondrian art with CSS grid layout.
+      </div>
+    </div>
+    <div
+      style=" font-size: 170PX;z-index:0;
+"
+      class="flex absolute justify-between w-full opacity-20"
+    >
+      <h1 class="w-1/2 text-left text-gray-500">Work</h1>
+      <h1 class="w-1/2 text-right" style="color:#139487">03</h1>
+    </div>
+    <!-- component -->
+    <div class="mx-auto container md:px-24 px-7 lg:py-20 lg:px-36">
+      <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+      <dev class="text-white text-2xl">
+        <h1 class="mb-20">Other Noteworthy Projects</h1>
+      </dev>
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+        <div class="rounded" v-for="( row , i ) in others" :key="i">
+          <div
+            v-for="(card , i) in row"
+            :key="i"
+            class="w-full hover:scale-105 h-80 flex drop-shadow-xl flex-col justify-between dark:bg-gray-800 bg-white dark:border-gray-700 rounded-lg border border-gray-400 mb-6 py-5 px-4 transition-all duration-100 ease-in-out"
+          >
+            <div>
+              <h3
+                class="text-gray-800 dark:text-gray-100 leading-7 px-3 text-center font-semibold w-full"
+              >{{card.title}}</h3>
+            </div>
+            <div class="w-full h-36 flex justify-center">
+              <img :src="card.icon" />
+            </div>
+            <div>
+              <div class="mb-3 flex items-center">
+                <div
+                  class="border border-gray-300 dark:border-gray-700 rounded-full px-3 py-1 dark:text-gray-400 text-gray-600 text-xs flex items-center"
+                  aria-label="due on"
+                  role="contentinfo"
+                >
+                  <p class="ml-2 dark:text-gray-400">{{card.subtitle}}</p>
+                </div>
+                <a :href="card.url" class="w-8 h-8 mr-1" target="_blank">
+                  <button
+                    class="h-full w-full rounded-full dark:text-gray-800 bg-gray-800 text-white flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                    aria-label="edit note"
+                    role="button"
+                  >
+                    <i class="fa fa-github duration-500 ease-in-out text-2xl text-white" id></i>
+                  </button>
+                </a>
+                <a :href="card.iconLink" class="w-6 h-6" target="_blank" v-show="card.iconLink">
+                  <button
+                    class="w-full h-full rounded-full dark:text-gray-800 bg-gray-800 text-white flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                    aria-label="edit note"
+                    role="button"
+                  >
+                    <img class="h-full w-full" :src="link" alt />
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="c-article__img-wrapper">
-          <img class="c-article__img" src="https://assets.codepen.io/204808/css-grid-mondrian.png" alt="Responsive Mondrian art with CSS grid" />
-        </div>
-      </a>
-    </article>
-
-    <article class="c-article">
-      <a class="c-article__link" href="#">
-        <div>
-          <header>
-            <h3 class="c-article__heading">Space rocket with requestAnimationFrame</h3>
-          </header>
-          <div class="c-article__content">
-            Create the space rocket animation with stars in different perspective.
-          </div>
-        </div>
-        <div class="c-article__img-wrapper">
-          <img class="c-article__img" src="https://assets.codepen.io/204808/17.Space-Rocket-with-requestAnimationFrame.png" alt="Responsive Mondrian art with CSS grid" />
-        </div>
-      </a>
-    </article>
-  </section>
-</main>
-
-<div class="c-author">
-  Built with 💛 &nbsp; by <a target="_blank" class="c-author__link" href="https://frontend30.com/cp-magicarea">Ryan Yu</a>
-</div>
-
-<div class="c-fe30">
-  <div class="c-fe30__inner">
-    <a class="c-fe30__photo" href="https://frontend30.com/cp-magicarea" target="_blank"><img class="c-fe30__img" src="https://assets.codepen.io/204808/ryan-yu-profile.png" alt="Ryan Yu" /></a>
-    <p>Hey 👋 &nbsp; Would you like to learn how to build the <strong>Magic area on hover/focus</strong>?</p>
-    <p>Check it out at <a href="https://frontend30.com/cp-magicarea" class="c-fe30__link" target="_blank">frontend30.com</a>.</p>
-  </div>
-</div>
-
+      </div>
+      <button
+      @click="showMore"
+        class="transition-all p-2 pl-5 pr-5 m-6 duration-700 transform hover:bg-emerald-700 text-base rounded-lg focus:border-4"
+        style="border:2px solid #00A99D; color:#00A99D"
+      >{{show?'Show Less':'Show More' }}</button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  mounted(){
-    const magicAreas = [...document.querySelectorAll(".c-magic-area")];
-
-const getAreaDetails = (area) => {
-  const width = area.clientWidth;
-  const height = area.clientHeight;
-
-  const position = area.getBoundingClientRect();
-  const top = position.top + window.scrollY;
-  const left = position.left;
-  console.log(position.top);
-  return {
-    left,
-    height,
-    top,
-    width
-  };
+  data() {
+    return {
+      link: require("@/assets/icons/link.svg"),
+      show:false,
+      projects: [
+        {
+          title: "Royimmo",
+          domain: "Ecommerce website",
+          main: "PR1.jpg",
+          video: "roya.mp4",
+          link: "https://royaimmo.ma/",
+          backend: "Laravel",
+          frontend: "Vue js",
+          css: "TailwindCss",
+        },
+        {
+          title: "Ajicod",
+          domain: "Ecommerce website",
+          main: "PR2.jpg",
+          video: "ajicod.mp4",
+          link: "https://ajicod.com/en",
+          backend: "Laravel",
+          frontend: "' ' ",
+          css: "Bootstrap",
+        },
+        {
+          title: "AWID Livraison",
+          domain: "Ecommerce website",
+          main: "PR3.jpg",
+          video: "awid.mp4",
+          link: "https://awidlivraison.com/",
+          backend: "Laravel",
+          frontend: "Vue js",
+          css: "Bootstrap",
+        },
+      ],
+      others: [
+        [
+          {
+            title:
+              "A simple page web app for weather bilt with react js , openweathermap ",
+            iconLink: "https://weatherr-app-react-js.netlify.app",
+            icon: require("@/assets/icons/cloud.svg"),
+            subtitle: "React js 2020",
+            url: "https://github.com/ZakariaMegnioui/Weather-Web-App",
+          },
+          {
+            title: "Netflix Landing reaction with tailwind ",
+            iconLink: "https://netflex-landing-page.netlify.app",
+            icon: require("@/assets/icons/netflix.svg"),
+            subtitle: "Tailwind 2022",
+            url: "#",
+          },
+         
+        ],
+        [
+          {
+            title: "Building a backend app with spring boot , jwt , mvs , jee ",
+            iconLink: "",
+            icon: require("@/assets/icons/spring.svg"),
+            subtitle: "spring boot 2021",
+            url: "#",
+          },
+          {
+            title: "Online Courses Dashboard with tailwindCSS",
+            iconLink: "https://dashboard-tailwind3css.netlify.app",
+            icon: require("@/assets/icons/dashboard.svg"),
+            subtitle: "Tailwind 2022",
+            url: "#",
+          },
+         
+        ],
+        [
+          {
+            title:
+              "Building a management system for livestock breeding and calculating productivity and genetic values ",
+            iconLink: "",
+            icon: require("@/assets/icons/cow.svg"),
+            subtitle: "Laravel Vue js",
+            url: "#",
+          },
+          {
+            title: "clone a youtube page just using tailwind css",
+            iconLink: "https://youtub6tailwind.netlify.app",
+            icon: require("@/assets/icons/youtube.svg"),
+            subtitle: "tailwind CSS 2021",
+            url: "#",
+          },
+         
+        ],
+      ],
+      more: [
+        {
+          title: " simple todo list with react js ",
+          iconLink: "toodo-lisyt.netlify.app",
+          icon: require("@/assets/icons/todo.svg"),
+          subtitle: "React js 2020",
+          url: "https://github.com/ZakariaMegnioui/Weather-Web-App",
+        },
+       
+        {
+            title: "Building a Movies website with react js , MDB",
+            iconLink: "https://movie-db-react-js.netlify.app/",
+            icon: require("@/assets/icons/movie.svg"),
+            subtitle: "React Js 2020",
+            url: "#",
+          },
+           {
+            title: "Crud php app , php , mvc , mysql",
+            iconLink: "",
+            icon: require("@/assets/icons/crud.svg"),
+            subtitle: "php 2022",
+            url: "https://github.com/ZakariaMegnioui/pdomvc",
+          },
+      ],
+    };
+  },
+  methods: {
+    showMore() {
+      this.show=! this.show;
+      if (this.show) {
+       this.others[0].push(this.more[0]);
+      this.others[1].push(this.more[1]);
+      this.others[2].push(this.more[2]);
+      } else {
+         this.others[0].pop();
+      this.others[1].pop();
+      this.others[2].pop();
+      }
+     
+    },
+  },
 };
-
-const setTweenArea = (link, magicArea) => {
-  const { left, height, top, width } = getAreaDetails(link);
-
-  gsap.set(magicArea, {
-    top,
-    left,
-    width,
-    height
-  });
-};
-
-const tweenMagicArea = (target, magicArea) => {
-  const { left, height, top, width } = getAreaDetails(target);
-
-  gsap.to(magicArea, 0.5, {
-    left,
-    top,
-    width,
-    height,
-    ease: Power3.easeInOut
-  });
-};
-
-const getMagicActiveElement = (links) => {
-  return links.filter((link) => {
-    return (
-      link.classList.contains("is-magic-active") ||
-      link.getAttribute("aria-current") === "page"
-    );
-  });
-};
-
-const moveMagicArea = (links, magicArea, isTweenBack) => {
-  const magicActiveElement = getMagicActiveElement(links);
-
-  links.map((link) => {
-    link.addEventListener("mouseenter", function (e) {
-      tweenMagicArea(e.target, magicArea);
-    });
-
-    link.addEventListener("focus", function (e) {
-      tweenMagicArea(e.target, magicArea);
-    });
-
-    if (isTweenBack && magicActiveElement.length) {
-      link.addEventListener("mouseleave", function (e) {
-        tweenMagicArea(magicActiveElement[0], magicArea);
-      });
-
-      link.addEventListener("focusout", function (e) {
-        tweenMagicArea(magicActiveElement[0], magicArea);
-      });
-    }
-  });
-};
-
-const setMagic = (links, magicArea) => {
-  // check if .is-magic-active || aria-current="page"
-  const magicActiveElement = getMagicActiveElement(links);
-
-  if (magicActiveElement.length) {
-    setTweenArea(magicActiveElement[0], magicArea);
-  } else {
-    setTweenArea(links[0], magicArea);
-  }
-};
-
-// const onResize = (links, magicArea) => {
-//   setMagic(links, magicArea);
-// };
-
-const initMagic = ({ isResize } = { isResize: false }) => {
-  if (!magicAreas.length) return;
-
-  magicAreas.map((magicArea) => {
-    const targetMagicArea = magicArea.getAttribute("data-target-class");
-
-    const links = [...document.querySelectorAll(targetMagicArea)];
-
-    if (!links.length) return;
-
-    setMagic(links, magicArea);
-
-    if (!isResize) {
-      const isTweenBack = magicArea.getAttribute("data-tween-back") === "true";
-
-      moveMagicArea(links, magicArea, isTweenBack);
-    }
-  });
-};
-
-initMagic();
-
-window.addEventListener(
-  "resize",
-  _.throttle(function () {
-    initMagic({ isResize: true });
-  }, 100)
-);
-
-VanillaTilt.init(document.querySelector(".c-fe30__inner"), {
-  max: 20,
-  perspective: 1000,
-  speed: 300
-});
-
-  }
-  ,
-
-methods(){}
-}
 </script>
 
 <style>

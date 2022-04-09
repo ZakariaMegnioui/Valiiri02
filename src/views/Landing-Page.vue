@@ -5,14 +5,7 @@
     <div
       class="card-avatar overflow-hidden absolute right-14 top-24 w-80 h-80 flex bg-transparent rounded-full hover:-translate-y-3 duration-500 ease-in-out hover:animate-none animate-pulse"
     >
-      <!-- <img
-      v-if="!move"
-        class="w-full h-full absolute duration-500 ease-in-out"
-        :class="move ?'' : 'slide'"
-        
-        :src="require(`@/assets/img/avatar${imgIn}.png`)"
-        alt
-      />-->
+    
       <img
         id="myAvatar"
         class="w-full h-full absolute duration-500 ease-in-out"
