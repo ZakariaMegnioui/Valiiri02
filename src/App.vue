@@ -1,13 +1,23 @@
 <template>
   <div id="app" class="">
+   <div class="home_section">
    <landing-page/>
+   </div>
    <Second/>
+   <div id="service_section">
     <Services/>
+    </div>
       <Qoutes/>
-
+      <div class="about_section">
    <About/>
+   </div>
    <Theard/>
+   <div id="case_section">
    <case-study/>
+   </div>
+   <div id="contact_section">
+   <ContactView/>
+   </div>
   </div>
 </template>
 <script>
@@ -18,17 +28,28 @@ import About from "./views/About.vue";
 import Services from "./views/Services.vue";
 import Qoutes from './views/Qoutes.vue';
 import CaseStudy from './views/Case-Study.vue';
+import ContactView from './views/Contact_view.vue';
+
 export default {
   name:'app',
    components:{
       LandingPage,
       Second,
+    
       About,
       Theard,
       Services,
       Qoutes,
       CaseStudy,
+      ContactView,
       CaseStudy,
+   },
+   methods:{
+      scroll(id) {  
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+      });
+      }
    }
 }
 </script>

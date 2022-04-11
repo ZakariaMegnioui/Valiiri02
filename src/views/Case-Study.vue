@@ -107,6 +107,7 @@
         style="border:2px solid #00A99D; color:#00A99D"
       >{{show?'Show Less':'Show More' }}</button>
     </div>
+
   </div>
 </template>
 
