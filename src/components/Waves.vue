@@ -53,7 +53,7 @@ c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3
           >I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.</p>
 
           <div id="container" class="mb-12 mt-8 -translate-x-3">
-            <button class="learn-more">
+            <button class="open-button" @click="click">
               <span class="circle" aria-hidden="true">
                 <span class="icon arrow"></span>
               </span>
@@ -105,8 +105,22 @@ import Logo from "@/components/Logo.vue";
 export default {
   components: {
     Logo,
+
   },
+  data(){
+    return{
+      open:false,
+    }
+  }
+  ,
+  methods:{
+    click(){
+      this.open= true;
+      this.$emit('isopen', this.open)
+    }
+  }
 };
+
 </script>
 
 <style scoped>
