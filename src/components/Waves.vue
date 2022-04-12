@@ -1,70 +1,55 @@
 <template>
-  <div class="main">
+  <div class="main flex flex-col  ">
     <!--Hey! This is the original version
     of Simple CSS Waves-->
 
-    <div class="header">
-      <!-- <Logo/> -->
-      <!--Content before waves-->
-
-      <div class="inner-header">
-        <!--Just the logo.. Don't mind this-->
-        <svg
-          version="1.1"
-          class="logoo absolute left-12 top-9"
-          baseProfile="tiny"
-          id="Layer_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 500 500"
-          xml:space="preserve"
-        >
-          <path
-            fill="#FFFFFF"
-            stroke="#000000"
-            stroke-width="10"
-            stroke-miterlimit="10"
-            d="M57,283"
-          />
-          <g>
-            <path
-              d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
-C499.8,112.4,388.1,0.8,250.4,0.8z M383.8,326.3c-62,0-101.4-14.1-117.6-46.3c-17.1-34.1-2.3-75.4,13.2-104.1
-c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7		c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2	c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z"
-            />
-          </g>
-        </svg>
-        <div class="w-4 flex flex-col absolute top-32 left-12 opacity-100">
-        <a href="https://www.instagram.com/zakaria.megnioui/"  target="_blank">  <i class="fa fa-instagram duration-500 ease-in-out" id="apple"></i></a>
-         <a href="https://www.linkedin.com/in/valiiri/" target="_blank"><i class="fa fa-linkedin transition duration-500 ease-in-out" id="twitter"></i></a> 
-        <a href="https://github.com/ZakariaMegnioui" target="_blank" > <i class="fa fa-github-square github  duration-500 ease-in-out" id="github"></i></a> 
-         <a href="https://www.facebook.com/profile.php?id=100078127189264" target="_blank"><i class="fa fa-facebook-square duration-500 ease-in-out" id="facebook"></i></a> 
-        </div>
-        <div class="text-left absolute left-48 top-28">
-          <p class="font-bold mb-1" style="color:#139487 ">Hi, my name is</p>
+    <div class="header  w-full flex flex-col lg:flex-row   " style="height:80vh">
+     <div class="text-left lg:h-full h-2/3 lg:w-2/3 w-full   flex justify-center flex-col" >
+        
           
-          <h1 style="font-size:2.7rem " class="title text-gray-400" data-text="Zakaria Megnioui" >Zakaria Megnioui</h1>
+          <h1  class="title w-4/5 text-2xl  md:text-5xl  text-gray-400" data-text="Zakaria Megnioui" >   <p class="font-bold mb-2 text-xs md:text-sm md:mb-5" style="color:#139487 ">Hi, my name is</p>  Zakaria Megnioui</h1>
 
-          <h1 style="font-size:2.7rem" class="title text-gray-500">I build things for the web.</h1>
-          <p
-            class="font-bold text-gray-500 w-3/6 mt-1"
+          <h1  class="title text-2xl md:text-5xl w-4/5 text-gray-500 mt-2 md:mt-4">I build things for the web. <p
+            class="font-bold  text-xs md:text-sm  text-gray-500  mt-2 md:mt-4"
           >I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.</p>
-
-          <div id="container" class="mb-12 mt-8 -translate-x-3">
-            <button class="open-button" @click="click">
-              <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
+</h1>
+          
+          <div id="container" class="w-4/5  mt-5 lg:mt-11">
+            <button class="open-button w-36 hidden sm:block md:w-48" @click="click">
+              <span class="circle w-full h-8 md:w-12 md:h-12" aria-hidden="true">
+                <span class="icon arrow"> </span>
               </span>
-              <span class="button-text">Contact Me</span>
+           
+              <span class="button-text ">Contact Me </span>
+             
+            </button>
+            <button @click="click"  style="background: #139487;" class="open-button px-6 py-1 rounded-md text-white block sm:hidden">
+              Contact Me
             </button>
           </div>
         </div>
-      </div>
+        <div class="lg:h-full h-1/3 w-full lg:w-1/3 flex justify-center">
+     
+    <div
+      class="card-avatar overflow-hidden w-2/5 h-4/5  md:w-60 md:h-60 lg:w-80 lg:h-80 flex bg-transparent rounded-full hover:-translate-y-3 duration-500 ease-in-out hover:animate-none animate-pulse"
+    >
+   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute transform -translate-y-32 cursor-pointer animate-pulse"
+        style="color:rgba(113, 235, 191, 0.8)" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+      <img
+        id="myAvatar"
+        class="w-full h-full duration-500 ease-in-out"
+        :src="require(`@/assets/img/avatar${imgIn}.png`)"
+        alt
+      />
+   
 
-      <!-- Waves Container -->
-      <div>
+   
+    </div>
+        </div>
+    </div>
+    <div class="bottom w-full " style="height :20vh;">
         <svg
           class="waves"
           xmlns="http://www.w3.org/2000/svg"
@@ -87,13 +72,10 @@ c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3
           </g>
         </svg>
       </div>
-
-      <!--Waves end-->
-    </div>
     <!--Header ends-->
 
     <!--Content starts-->
-    <div class="content flex">
+    <div class="content flex transform -translate-y-12">
       <div class="scroll-down2"></div>
     </div>
     <!--Content ends-->
@@ -109,22 +91,80 @@ export default {
   },
   data(){
     return{
-      open:false,
+    imgIn: 1,
+      move: false,
     }
   }
   ,
-  methods:{
+  mounted(){
+   this.change()
+  },
+  methods: {
     click(){
-      this.open= true;
-      this.$emit('isopen', this.open)
+    
+      this.$emit('isopen', true)
+    },
+    change() {
+      const items = document.getElementById("myAvatar");
+
+      this.move = !this.move;
+      items.classList.remove("slideIn");
+        items.classList.add("slide");
+
+
+      setTimeout(() => {
+        items.classList.add("slideIn");
+        this.imgIn++;
+        if(this.imgIn==17){
+           this.imgIn=0;
+        }
+        
+      }, 100);
+        setTimeout(this.change, 8000);
+    },
+   
     }
-  }
+  
+
 };
 
 </script>
 
 <style scoped>
 @import "@/assets/styles/Waves.css";
+
+.home .slide {
+  animation: Out 2s linear;
+}
+.home .slideIn {
+  animation: In 1.5s forwards;
+
+}
+@keyframes In {
+  from {
+  transform: translateX(-1000px)
+}
+to{
+    transform: translateX(0px)
+
+}
+}
+@keyframes Out {
+  0% {
+    transform: translateX(0px);
+    
+  }
+ 
+  100% {
+    transform: translateX(2000px);
+  }
+  
+}
+.card-avatar {
+  box-shadow: 0 35px 65px 0 rgba(86, 184, 149, 0.42),
+    inset 0 -10px 15px 0 rgba(113, 235, 191, 0.8);
+}
+
 </style>
 
 

@@ -2,7 +2,11 @@
 
 .main {
   margin: 0;
-  height: 100vh;
+  width: 100%;
+ position: relative;
+
+
+  height: 100%;
   background: #0f0c29;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -12,19 +16,11 @@
 p {
   font-family: "Roboto Mono", monospace;
   letter-spacing: 1px;
-  font-size: 14px;
+  
   color: #333333;
 }
 
-.header {
-  position: relative;
-  text-align: center;
-  background: #0f0c29;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  color: white;
-}
 .logoo {
   width: 50px;
   fill: #139487;
@@ -33,10 +29,10 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 }
 
 .inner-header {
-  height: 65vh;
+  /* height: 65vh;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0; */
 }
 
 .flex {
@@ -53,7 +49,10 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
   margin-bottom: -7px; /*Fix for safari gap*/
   min-height: 100px;
   max-height: 200px;
-  transform: translateY(70px);
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
 
 .content {
@@ -92,16 +91,7 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
   }
 }
 /*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height: 40px;
-    min-height: 40px;
-  }
 
-  h1 {
-    font-size: 24px;
-  }
-}
 .scroll-down2 {
   width: 24px;
   height: 40px;
@@ -198,13 +188,7 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
   }
 }
 @import url("https://fonts.googleapis.com/css?family=Mukta:700");
-* {
-  box-sizing: border-box;
-}
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
 
 button {
   position: relative;
@@ -220,7 +204,6 @@ button {
   font-family: "Roboto Mono", monospace;
 }
 button.open-button {
-  width: 12rem;
   height: auto;
 }
 button.open-button .circle {
@@ -228,8 +211,7 @@ button.open-button .circle {
   position: relative;
   display: block;
   margin: 0;
-  width: 3rem;
-  height: 3rem;
+ 
   background: #139487;
   border-radius: 1.625rem;
 }
@@ -287,10 +269,10 @@ button:hover .button-text {
  .home .title {
   font-weight: bolder;
   letter-spacing: 2px;
-  font-size: 48px;
+
   font-family: "Poppins", sans-serif;
   cursor: pointer;
-  width: 65%;
+  
 }
 
 .title:hover {
@@ -604,4 +586,11 @@ button:hover .button-text {
   100% {
     text-shadow: -1px 0 0 blue, 1px 0 0 lime;
   }
+}
+@media (max-width: 608px) {
+  
+ .home p{
+   font-size: 8px;
+ }
+
 }
