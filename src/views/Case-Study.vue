@@ -51,7 +51,7 @@
     <!-- component -->
     <div class="mx-auto container md:px-24 px-7 lg:py-20 lg:px-36">
       <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
-      <dev class="text-white text-2xl">
+      <dev class="text-white text-xl  lg:text-2xl ">
         <h1 class="mb-20">Other Noteworthy Projects</h1>
       </dev>
       <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">

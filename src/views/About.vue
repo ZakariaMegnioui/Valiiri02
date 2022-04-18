@@ -28,7 +28,7 @@
             <p>html</p>
             <div class="progress inner-shadow">
               <div class="progress-bar" style="width: calc(90% - 14px);">
-                <span>90%</span>
+                <span class="">90%</span>
               </div>
             </div>
           </div>
@@ -93,8 +93,7 @@
         <div class="row">
           <div class="timeline">
             <div class="row">
-              <!--Timeline  Items Start-->
-              <div class="timeline-item">
+              <div class="small_one w-5/6 m-auto block md:hidden">
                 <div class="timeline-item-inner outer-shadow">
                   <i class="fas fa-briefcase icon"></i>
                   <span>sep 18, 2018 - Present</span>
@@ -104,9 +103,21 @@
                     quod ut illum commodi nisi nemo fuga placeat iure.</p>
                 </div>
               </div>
+              <!--Timeline  Items Start-->
+              <div class="timeline-item hidden md:block">
+                <div class="timeline-item-inner outer-shadow">
+                  <i class="fas fa-briefcase icon"></i>
+                  <span>sep 18, 2018 - Present</span>
+                  <h3>full Stack Web Developer </h3>
+                  <h4>name company, Republica Dominicana</h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem similique
+                    quod ut illum commodi nisi nemo fuga placeat iure.</p>
+                </div>
+              </div>
+              
               <!--Timeline  Items End-->
               <!--Timeline  Items Start-->
-              <div class="timeline-item">
+              <div class="timeline-item hidden md:block">
                 <div class="timeline-item-inner outer-shadow">
                   <i class="fas fa-briefcase icon"></i>
                   <span>sep 2016 - oct 2017 </span>
@@ -118,7 +129,7 @@
               </div>
               <!--Timeline  Items End-->
               <!--Timeline  Items Start-->
-              <div class="timeline-item">
+              <div class="timeline-item hidden md:block">
                 <div class="timeline-item-inner outer-shadow">
                   <i class="fas fa-briefcase icon"></i>
                   <span>sep 2014 - oct 2016</span>
@@ -142,8 +153,9 @@
         <div class="row">
           <div class="timeline">
             <div class="row">
+             
               <!--Timeline  Items Start-->
-              <div class="timeline-item">
+              <div class="timeline-item hidden md:block">
                 <div class="timeline-item-inner outer-shadow">
                   <i class="fas fa-graduation-cap icon"></i>
                   <span> 18, 2018 - Present</span>
@@ -155,7 +167,7 @@
               </div>
               <!--Timeline  Items End-->
               <!--Timeline  Items Start-->
-              <div class="timeline-item">
+              <div class="timeline-item hidden md:block">
                 <div class="timeline-item-inner outer-shadow">
                   <i class="fas fa-graduation-cap icon"></i>
                   <span>sep 2016 - oct 2017 </span>
@@ -165,14 +177,25 @@
                     quod ut illum commodi nisi nemo fuga placeat iure.</p>
                 </div>
               </div>
+              
               <!--Timeline  Items End-->
               <!--Timeline  Items Start-->
-              <div class="timeline-item">
+              <div class="timeline-item hidden md:block">
                 <div class="timeline-item-inner outer-shadow">
                   <i class="fas fa-graduation-cap icon"></i>
                   <span>sep 2014 - oct 2016</span>
                   <h3>education initial</h3>
                   <h4>Domitila Grullon, Republica Dominicana(La Vega)</h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem similique
+                    quod ut illum commodi nisi nemo fuga placeat iure.</p>
+                </div>
+              </div>
+               <div class="small_one  block md:hidden w-5/6 m-auto">
+                <div class="timeline-item-inner outer-shadow">
+                  <i class="fas fa-graduation-cap icon"></i>
+                  <span>sep 2016 - oct 2017 </span>
+                  <h3>high scholl and technical education</h3>
+                  <h4>polytechnic Padre Fantino, Republica Dominicana(Sanchez Ramirez)</h4>
                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem similique
                     quod ut illum commodi nisi nemo fuga placeat iure.</p>
                 </div>

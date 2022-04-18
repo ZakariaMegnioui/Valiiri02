@@ -1,12 +1,12 @@
 <template>
   <div class="contact_main overflow-hidden ">
-    <div class="h-36   w-1/2 m-auto">
-      <h1 class="text-4xl text-white mb-6">Get In Touch</h1>
-      <p class="text-base" style="color:#eff0f4"> Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+    <div class="h-36  w-3/4  md:w-1/2 m-auto">
+      <h1 class="text-2xl  lg:text-4xl text-white mb-6">Get In Touch</h1>
+      <p class="lg:text-base text-xs" style="color:#eff0f4"> Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
     </div>
     <Contact />
     <a href="https://github.com/ZakariaMegnioui/Valiiri_v2" target="_blank">
-    <h2 class="mb-6" > Designed & Built by Zakaria Megnioui <br>  <i class="fa fa-github text-xl"></i></h2>
+    <h2 class="mb-6 lg:text-base md:text-sm text-xs" > Designed & Built by Zakaria Megnioui <br>  <i class="fa fa-github text-xl"></i></h2>
     </a>
   </div>
 </template>
