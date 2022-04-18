@@ -15,6 +15,7 @@
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .project .card {
+  height: 20vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -57,7 +58,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -111,8 +111,8 @@
 
 .project .card .details .content .social-icons a {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 2vw;
+  height: 2vw;
   background: #333;
   color: #fff;
   display: flex;
@@ -122,6 +122,7 @@
   margin: 5px;
   font-size: 18px;
   transition: 0.2s;
+  font-size: 1vw;
 }
 
 .project .card .details .content .social-icons a:hover {

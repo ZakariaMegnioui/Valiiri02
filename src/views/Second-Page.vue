@@ -1,10 +1,10 @@
 <template>
- <div >
+ <div  class="hidden md:block">
 
 	 <section class="section top-section flex flex-col align-middle justify-center">
-		   <div class="circel h-80 w-80 rounded-full  absolute -top-5 right-0
+		   <div class="circel lg:h-80 lg:w-80 md:w-60 w-32 md:h-60 rounded-full  absolute -top-5 right-0
       " ></div>
- <div class="circel h-80 w-80 rounded-full absolute bottom-0 left-0" ></div>
+ <div class="circel lg:h-80 lg:w-80 md:w-60 w-32 md:h-60  rounded-full absolute bottom-0 left-0" ></div>
     <div class="content-container content-theme-light ">
       <div class="content-inner">
         <div class="content-center">

@@ -4,8 +4,6 @@
   margin: 0;
   width: 100%;
  position: relative;
-
-
   height: 100%;
   background: #0f0c29;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
@@ -269,7 +267,6 @@ button:hover .button-text {
  .home .title {
   font-weight: bolder;
   letter-spacing: 2px;
-
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   

@@ -1,9 +1,9 @@
 <template>
-  <div class="theard">
+  <div class="theard hidden md:block">
     
 
 
-<div class="images-leaning">
+<div class="images-leaning ">
   <div>
     <img src="@/assets/img/react.png" alt="Eleanor from The Good Place" />
   </div>

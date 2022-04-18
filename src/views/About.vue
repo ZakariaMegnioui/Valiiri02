@@ -208,4 +208,11 @@ export default {
 
 <style>
 @import "@/assets/styles/About.css";
+
+  @media (max-width: 400px) {
+   .about-section h1 {
+        font-size: 2rem;
+    }
+
+}
 </style>

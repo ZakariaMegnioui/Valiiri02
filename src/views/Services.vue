@@ -9,27 +9,27 @@
    <li v-for="(item , i ) in shapes" :key="i" :class="'shape '+item"></li>
   </ul>
 </div>
-    <div class="row1-container relative">
-      <div class="box box-down cyan lg:translate-y-12" :class="hover_service_card">
+    <div class="row1-container relative ">
+      <div class="box box-down  cyan lg:translate-y-12" :class="hover_service_card">
         <h2>MOBILE FRIENDLY</h2>
         <p>A responsive design make your website accessible o all users, regardless of their device</p>
-        <img :src="mobile" />
+        <img class="hidden md:block" :src="mobile" />
       </div>
 
       <div class="box red lg:translate-y-12" :class="hover_service_card">
         <h2 class="uppercase">Front-end Developer</h2>
         <p
-          class="lg:mb-3"
+          class="mb-3"
         >I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
-        <img :src="front_end" alt />
+        <img class="hidden md:block" :src="front_end" alt />
       </div>
 
-      <div class="box box-down blue lg:translate-y-10" :class="hover_service_card">
+      <div class="box box-down blue lg:translate-y-10 " :class="hover_service_card">
         <h2 class="uppercase">Website Design</h2>
         <p
           class="lg:mb-3"
         >I value simple content structure, clean design patterns, and thoughtful interactions.</p>
-        <img :src="design" alt />
+        <img class="hidden md:block" :src="design" alt />
       </div>
     </div>
     <div class="row2-container lg:translate-y-14  " >
@@ -37,7 +37,7 @@
          <h2 class="uppercase">Website Development</h2>
         <p
           class="lg:mb-3">I use various web technologies to develop attractive websites which converts visitors to customers</p>
-        <img :src="web" alt />
+        <img class="hidden md:block" :src="web" alt />
       </div>
     </div>
   

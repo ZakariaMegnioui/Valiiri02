@@ -1,33 +1,33 @@
 <template>
   <div class="project">
-    <div class="card h-72 w-2/5 relative" v-for="project in projects" :key="project.main">
+    <div class="card   w-2/5 relative " v-for="project in projects" :key="project.main">
       <div class="imgBox">
         <img :src="require(`@/assets/img/${project.main}`)" alt />
-        <div class="video">
+        <div class="video ">
           <video autoplay muted loop id="bg">
             <source :src="require(`@/assets/videos/${project.video}`)" type="video/mp4" />
           </video>
         </div>
       </div>
       <div class="details">
-        <div class="content w-1/2">
-          <h2 class="text-lg">
+        <div class="content w-full md:w-1/2">
+          <h2 class="md:text-base text-sm lg:text-lg">
             {{project.title}}
             <br />
-            <span class="text-base">{{project.domain}}</span>
+            <span class="md:text-sm text-xs lg:text-base">{{project.domain}}</span>
           </h2>
-          <ul class=" flex   text-xs justify-between w-full" >
+          <ul class=" md:flex text-xs justify-between w-full hidden " >
             <li v-for="( tech , i) in project.tech" :key="i">{{tech}}</li>   
           
           </ul>
 
           <div class="social-icons">
-            <a href="#">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
+            <a  href="#">
+              <i  class="fa fa-facebook " aria-hidden="true"></i>
             </a>
             <a :href="project.link" target="_blank">
               <i class aria-hidden="true">
-                <img class="h-6 w-6" :src="link" alt />
+                <img style="width:1.5vw;" :src="link" alt />
               </i>
             </a>
             <a href="#">
