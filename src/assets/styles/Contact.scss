@@ -7,12 +7,10 @@
     position: relative;
    overflow: hidden;
 
-
 }
 
 .contact {
     position: relative;
-    max-width: 420px;
     padding: 40px 20px;
     overflow: hidden;
     margin: 0 auto;
@@ -47,12 +45,9 @@
     height: 10%;
     padding: 30px 20px 50px 30px;
     position: relative;
-    text-align: center;
 }
 @media (min-width: 414px) {
-    .contact main section .content {
-        text-align: left;
-   }
+   
 }
 .contact main section .content img {
     display: inline-block;
@@ -73,9 +68,7 @@
     margin-top: 10px;
 }
 @media (min-width: 414px) {
-    .contact main section .content aside {
-        width: 60%;
-   }
+    
 }
 .contact main section .content aside h1 {
     font-weight: 100;
@@ -133,6 +126,7 @@
     -o-transform: scale(0);
     transform: scale(0);
 }
+
 .contact main button {
     position: absolute;
     bottom: 0;
@@ -310,8 +304,7 @@
 }
 .contact nav a .icon {
     float: left;
-    width: 50px;
-    height: 50px;
+    
     border-radius: 50%;
     overflow: hidden;
     margin-right: 20px;

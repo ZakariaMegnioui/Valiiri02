@@ -19,19 +19,9 @@ p {
 }
 
 
-.logoo {
-  width: 50px;
-  fill: #139487;
-  padding-right: 15px;
-  display: inline-block;
-}
 
-.inner-header {
-  /* height: 65vh;
-  width: 100%;
-  margin: 0;
-  padding: 0; */
-}
+
+
 
 .flex {
   /*Flexbox for containers*/
@@ -156,6 +146,7 @@ p {
   text-shadow: 0 0 50px #139487, 0 0 100px #139487, 0 0 150px #139487,
     0 0 200px #139487;
   margin-bottom: 40px;
+  transition: 1s all;
 }
 #twitter {
   animation-delay: 0.3s;

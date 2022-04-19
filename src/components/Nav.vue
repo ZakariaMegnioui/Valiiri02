@@ -1,52 +1,60 @@
 <template>
-  <div>
-      
-    <div :class="open?'overlay-slide-down' :'overlay-slide-up'" class="overlay-navigation">
-      <nav  role="navigation">
-        <ul>
-          <li :class="open?'slide-in-nav-item' :'slide-in-nav-item-reverse'" >
-            <a href="#" data-content="The beginning">Home</a>
-          </li>
-          <li :class="open?'slide-in-nav-item-delay-1' :'slide-in-nav-item-delay-1-reverse'" >
-            <a href="#" data-content="Curious?">About</a>
-          </li>
-          <li :class="open?'slide-in-nav-item-delay-2' :'slide-in-nav-item-delay-2-reverse'" >
-            <a href="#" data-content="I got game">Skills</a>
-          </li>
-          <li :class="open?'slide-in-nav-item-delay-3' :'slide-in-nav-item-delay-3-reverse'" >
-            <a href="#" data-content="Only the finest">Works</a>
-          </li>
-          <li :class="open?'slide-in-nav-item-delay-4' :'slide-in-nav-item-delay-4-reverse'" >
-            <a href="#" data-content="Don't hesitate">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+  <div class="navigation">
+    <div @click="open=!open" :class="open ?'turnafter turnbefor':''" class="hamburger-slim cursor-pointer "></div>
 
-    <section >
-      <div @click="activate"  class="open-overlay">
-        <span :class="open ? 'animate-top-bar': 'animate-out-top-bar'" class="bar-top"></span>
-        <span :class="open ? 'animate-middle-bar': 'animate-out-middle-bar'" class="bar-middle"></span>
-        <span :class="open ? 'animate-bottom-bar': 'animate-out-bottom-bar'" class="bar-bottom"></span>
-      </div>
-    </section>
+    <div class="navigation__background" :class="open ? 'scale ' : ''">&nbsp;</div>
+
+    <nav class="navigation__nav fixed" :class="open ? 'w-full opacity-100 top top-0 left-0' : 'w-0 opacity-0 -left-56 -top-96'">
+      <ul class="navigation__list" >
+        <li @click="selector('home')"  class="navigation__item">
+          <a  class="navigation__link">
+            <span>01</span>Home
+          </a>
+        </li>
+        <li @click="selector('services')"  class="navigation__item">
+          <a  class="navigation__link">
+            <span>02</span>Services
+          </a>
+        </li>
+        <li @click="selector('about')"  class="navigation__item">
+          <a  class="navigation__link">
+            <span>03</span>About Me
+          </a>
+        </li>
+        <li @click="selector('work')"  class="navigation__item">
+          <a  class="navigation__link">
+            <span>04</span>Case Study
+          </a>
+        </li>
+        <li @click="selector('contact')"  class="navigation__item">
+          <a  class="navigation__link">
+            <span>05</span>Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'navbar',
 
-data() {
+  data() {
     return {
       open: false,
     };
   },
-  mounted(){
-  // LandPg.run();
+  mounted() {
+    // LandPg.run();
   },
   methods: {
     activate() {
       this.open = !this.open;
+    },
+    selector(item){
+      this.$emit('select', item)
+      this.open=false;
     }
   },
 };

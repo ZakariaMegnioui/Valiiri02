@@ -4,7 +4,14 @@
     of Simple CSS Waves-->
 
     <div class="header  w-full flex flex-col lg:flex-row   " style="height:80vh">
-     <div class="text-left lg:h-full h-2/3 lg:w-2/3 w-full   flex justify-center flex-col" >
+       <div class="w-4 flex flex-col absolute z-50 top-36  left-8 opacity-100">
+        <a href="https://www.instagram.com/zakaria.megnioui/"  target="_blank">  <i class="fa fa-instagram" id="apple"></i></a>
+         <a href="https://www.linkedin.com/in/valiiri/" target="_blank"><i class="fa fa-linkedin" id="twitter"></i></a> 
+        <a href="https://github.com/ZakariaMegnioui" target="_blank"> <i class="fa fa-github-square github" id="github"></i></a> 
+         <a href="https://www.facebook.com/profile.php?id=100078127189264" target="_blank"><i class="fa fa-facebook-square" id="facebook"></i></a> 
+       
+        </div>
+     <div class="text-left lg:h-full h-2/3 lg:w-2/3 w-full  ml-8 flex justify-center flex-col" >
         
           
           <h1  class="title w-4/5 text-2xl  md:text-5xl  text-gray-400" data-text="Zakaria Megnioui" >   <p class="font-bold mb-2 text-xs md:text-sm md:mb-5" style="color:#139487 ">Hi, my name is</p>  Zakaria Megnioui</h1>
@@ -84,7 +91,10 @@
 
 <script>
 import Logo from "@/components/Logo.vue";
+
 export default {
+  name: 'waves',
+
   components: {
     Logo,
 
