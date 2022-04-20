@@ -1,5 +1,12 @@
 <template>
   <div class="project">
+    <div
+ 
+      class="flex lg:text-9xl md:text-7xl text-6xl  h-28   justify-between w-full opacity-20"
+    >
+      <h1 class="w-1/2 text-left text-gray-500">Work</h1>
+      <h1 class="w-1/2 text-right" style="color:#139487">03</h1>
+    </div>
     <div class="card   w-2/5 relative " v-for="project in projects" :key="project.main">
       <div class="imgBox">
         <img :src="require(`@/assets/img/${project.main}`)" alt />
@@ -40,14 +47,7 @@
         </div>
       </div>
     </div>
-    <div
-      style=" font-size: 170PX;z-index:0;
-"
-      class="flex absolute justify-between w-full opacity-20"
-    >
-      <h1 class="w-1/2 text-left text-gray-500">Work</h1>
-      <h1 class="w-1/2 text-right" style="color:#139487">03</h1>
-    </div>
+    
     <!-- component -->
     <div class="mx-auto container md:px-24 px-7 lg:py-20 lg:px-36">
       <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
@@ -113,6 +113,7 @@
 
 <script>
 export default {
+  name:'casestudy',
   data() {
     return {
       link: require("@/assets/icons/link.svg"),

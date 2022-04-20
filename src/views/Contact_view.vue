@@ -15,6 +15,7 @@
 import Contact from "@/components/contact.vue";
 
 export default {
+  name:'contactview',
   components: {
     Contact,
   },

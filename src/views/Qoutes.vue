@@ -8,7 +8,9 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name:'qoutes'
+};
 </script>
 
 <style>

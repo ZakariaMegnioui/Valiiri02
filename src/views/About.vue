@@ -2,7 +2,7 @@
   
     <!-- About section start -->
 <section class="about-section " style=" background-color: #efefef;">
-      <div class="big-title flex justify-between w-full">
+      <div class="big-title flex justify-between lg:text-9xl md:text-7xl text-6xl  h-28  w-full">
       <h1 class=" w-1/2 text-left">Aboute</h1>
         <h1 class="w-1/2 text-right " style="color:#139487">02</h1>
         </div>

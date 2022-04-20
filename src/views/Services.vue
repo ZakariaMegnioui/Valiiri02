@@ -1,5 +1,5 @@
 <template>
-  <div class="case"> <div class="SER transform -translate-y-12 flex justify-between w-full">
+  <div class="case"> <div class="SER lg:text-9xl md:text-7xl text-6xl  h-28 flex justify-between w-full">
         <h1 class=" w-1/2 text-left">Services</h1>
         <h1 class="w-1/2 text-right " style="color:#139487">01</h1>
   </div>

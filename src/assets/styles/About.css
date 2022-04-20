@@ -131,11 +131,10 @@ Body
 About-section
 -------------*/
 .big-title{
- font-size: 13vw;
- opacity: 0.1;
- position: absolute;
- top: 3;
- z-index: -1;
+ 
+ opacity: 0.2;
+ 
+ 
 }
 .about-section{
     

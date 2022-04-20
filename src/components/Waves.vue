@@ -4,13 +4,72 @@
     of Simple CSS Waves-->
 
     <div class="header  w-full flex flex-col lg:flex-row   " style="height:80vh">
-       <div class="w-4 flex flex-col absolute z-50 top-36  left-8 opacity-100">
-        <a href="https://www.instagram.com/zakaria.megnioui/"  target="_blank">  <i class="fa fa-instagram" id="apple"></i></a>
-         <a href="https://www.linkedin.com/in/valiiri/" target="_blank"><i class="fa fa-linkedin" id="twitter"></i></a> 
-        <a href="https://github.com/ZakariaMegnioui" target="_blank"> <i class="fa fa-github-square github" id="github"></i></a> 
-         <a href="https://www.facebook.com/profile.php?id=100078127189264" target="_blank"><i class="fa fa-facebook-square" id="facebook"></i></a> 
-       
-        </div>
+     
+        <div class="share-buttons fixed top-36 left-3  lg:left-6">
+  <div class="share-button ">
+    <div class="share-button-secondary">
+      <div class="share-button-secondary-content">
+        Zakaria_Megnioui
+      </div>
+    </div>
+    <a href="https://www.linkedin.com/in/valiiri/" target="_blank">
+    <div class="share-button-primary">
+      <i class="share-button-icon fa fa-linkedin"></i>
+    </div>
+    </a>
+  </div>
+
+  <div class="share-button">
+    <div class="share-button-secondary">
+      <div class="share-button-secondary-content">
+       @ZakariaMegnioui
+      </div>
+    </div>
+     <a href="https://www.facebook.com/profile.php?id=100078127189264" target="_blank">   
+    <div class="share-button-primary">
+      <i class="share-button-icon fa fa-facebook"></i>
+    </div>
+    </a>
+  </div>
+
+  <div class="share-button">
+    <div class="share-button-secondary">
+      <div class="share-button-secondary-content">
+        @zakaria.menioui
+      </div>
+    </div>
+    <a href="https://www.instagram.com/zakaria.megnioui/"  target="_blank">
+    <div class="share-button-primary">
+      <i class="share-button-icon fa fa-instagram"></i>
+    </div>
+    </a>
+  </div>
+  
+  <div class="share-button">
+    <div class="share-button-secondary">
+      <div class="share-button-secondary-content">
+        @ZakariaMegnioui
+       </div>
+    </div>
+          <a href="https://github.com/ZakariaMegnioui" target="_blank">
+
+    <div class="share-button-primary">
+      <i class="share-button-icon fa fa-github"></i>
+    </div>
+    </a>
+  </div>
+  
+  <div class="share-button">
+    <div class="share-button-secondary">
+      <div class="share-button-secondary-content">
+        fromvaliiri@gmail.com
+      </div>
+    </div>
+    <div class="share-button-primary">
+      <i class="share-button-icon fa fa-google-plus"></i>
+    </div>
+  </div>
+</div>
      <div class="text-left lg:h-full h-2/3 lg:w-2/3 w-full  ml-8 flex justify-center flex-col" >
         
           

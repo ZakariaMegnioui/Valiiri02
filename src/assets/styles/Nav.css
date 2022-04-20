@@ -33,7 +33,7 @@
 }
 .navigation__link, .navigation__link{
   display: inline-block;
-  font-size: 3rem;
+
   font-weight: 300;
   padding: 1rem 2rem;
   color: #fff;
@@ -123,4 +123,23 @@
 .turnafter:after {
   top: 50%;
   transform: rotate(315deg);
+}
+@media (max-width: 708px) {
+  .hamburger-slim:after {
+    
+    top: calc(100% - 15px);
+  }
+  .hamburger-slim {
+   
+    height: 22px;
+    
+  }
+  .hamburger-slim:before, .hamburger-slim:after {
+    
+    content: "";
+    height: 2px;
+    
+    width: 40px;
+  }
+
 }

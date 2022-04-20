@@ -128,46 +128,6 @@ p {
   }
 }
 
-#apple,
-#twitter,
-#github,
-#facebook {
-  font-size: 1.4em;
- cursor: pointer;
-  color: #fff;
-  box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
-    2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
-    inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
-    inset 2px 2px 10px #00000080;
-  border-radius: 29px;
-  padding: 12px 19px;
-  margin: 0 40px;
-  animation: animate 3s linear infinite;
-  text-shadow: 0 0 50px #139487, 0 0 100px #139487, 0 0 150px #139487,
-    0 0 200px #139487;
-  margin-bottom: 40px;
-  transition: 1s all;
-}
-#twitter {
-  animation-delay: 0.3s;
-}
-#facebook {
-  animation-delay: 0.7s;
-}
-#facebook:hover {
-  transform: scale(1.1);
-}
-
-#github:hover {
-  transform: scale(1.1);
-}
-#twitter:hover{
-  transform: scale(1.1);
- }
- #apple:hover{
-  transform: scale(1.1);
- }
-
 @keyframes animate {
   from {
     filter: hue-rotate(0deg);
@@ -265,6 +225,78 @@ button:hover .button-text {
 
 .title:hover {
   animation: glitch 2s steps(100) infinite;
+}
+
+
+
+.share-buttons {
+  width: 30px;
+  height: 212px;
+  z-index: 999;
+}
+.share-buttons .share-button {
+  float: left;
+  margin-top:35px;
+}
+.share-buttons .share-button:first-child {
+  margin-top: 0;
+}
+.share-buttons .share-button:after {
+  clear: both;
+  display: table;
+}
+.share-button {
+  display: block;
+  position: relative;
+  height: 30px;
+}
+.share-button:hover {
+  cursor: pointer;
+}
+
+.share-button:hover .share-button-secondary-content {
+  transform: translate3d(0, 0, 0);
+}
+.share-button-primary {
+  position: absolute;
+  background: linear-gradient(to bottom, #fefeff, #d4d4db, #c2c2c2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  left: 0;
+  top: 50%;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+
+  margin-top: -15px;
+}
+.share-button-icon {
+  display: block;
+  color: #242424;
+  position: absolute;
+  width: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  margin-top: 1px;
+}
+.share-button-secondary {
+  overflow: hidden;
+  margin-left: 15px;
+  height: 30px;
+}
+.share-button-secondary-content {
+  font-family: sans-serif;
+  font-size: 0.75em;
+  background: #fff;
+  display: block;
+  height: 30px;
+  text-align: left;
+  padding-left: 24px;
+  padding-right: 18px;
+  line-height: 30px;
+  color: #139487;
+  border-radius: 0 15px 15px 0;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 175ms ease;
 }
 
 @keyframes glitch {
@@ -576,9 +608,28 @@ button:hover .button-text {
   }
 }
 @media (max-width: 608px) {
-  
- .home p{
-   font-size: 8px;
- }
 
-}
+  .home p{
+    font-size: 8px;
+  }
+ 
+ }
+ @media (max-width: 708px) {
+   .share-button-primary {
+     
+  
+     width: 20px;
+     height: 20px;
+  
+   }
+ 
+   .share-button-icon {
+   
+    width: 20px;
+    
+    font-size: 10px;
+    transform: translateY(-5px);
+   
+  }
+ 
+ }
