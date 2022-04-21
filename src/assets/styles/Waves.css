@@ -255,6 +255,8 @@ button:hover .button-text {
 }
 
 .share-button:hover .share-button-secondary-content {
+  width: 100%;
+  opacity: 1;
   transform: translate3d(0, 0, 0);
 }
 .share-button-primary {
@@ -290,6 +292,8 @@ button:hover .button-text {
   display: block;
   height: 30px;
   text-align: left;
+  width: 0px;
+  opacity: 0;
   padding-left: 24px;
   padding-right: 18px;
   line-height: 30px;
