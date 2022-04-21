@@ -37,7 +37,10 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
+
 export default {
+  
   name: 'navbar',
 
   data() {
@@ -47,8 +50,25 @@ export default {
   },
   mounted() {
     // LandPg.run();
+        this.headerAnimation(".hamburger-slim", -2000);
+
   },
   methods: {
+     headerAnimation(clas, y) {
+      gsap.fromTo(
+        clas,
+        {
+          y: y,
+          immediateRender: true
+        },
+        {
+          y: 0,
+          duration: 1.5,
+          ease: "elastic",
+          delay:1
+        }
+      );
+    },
     activate() {
       this.open = !this.open;
     },

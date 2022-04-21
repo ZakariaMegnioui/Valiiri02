@@ -1,14 +1,20 @@
 <template>
   <div id="app">
-    <div class="w-full h-28 top-0 flex justify-between mb-10 fixed z-50 transition-all duration-1000 delay-500" :class="up ? 'top-0' : '-top-52'">
-      <div class="lg:w-16 lg:h-16 md:w-14 md:h-14 w-12 h-12 transform z-10 ml-4 md:ml-16">
+    <div
+      class="w-full h-28 top-0 flex justify-between mb-10 fixed z-50 transition-all duration-1000 delay-500"
+      :class="up ? 'top-0' : '-top-52'"
+    >
+      <div
+        ref="logo"
+        class="logo lg:w-16 lg:h-16 md:w-14 md:h-14 w-12 h-12 transform z-10 ml-4 md:ml-16"
+      >
         <img @click="scrollNav('home')" src="@/assets/img/logo.png" alt />
       </div>
-      <div class="lg:w-16 lg:h-16 md:w-14 md:h-14 w-10 h-10  mr-4 md:mr-16 z-50 flex">
+      <div ref="nav" class="mainnav lg:w-16 lg:h-16 md:w-14 md:h-14 w-10 h-10 mr-4 md:mr-16 z-50 flex">
         <Nav @select="select" />
       </div>
     </div>
-    <header class="w-full md:h-20  h-7 lg:h-2 "></header>
+    <header class="w-full md:h-20 h-7 lg:h-2"></header>
     <div id="home">
       <landing-page />
     </div>
@@ -39,7 +45,7 @@ import Qoutes from "./views/Qoutes.vue";
 import CaseStudy from "./views/Case-Study.vue";
 import ContactView from "./views/Contact_view.vue";
 import Nav from "./components/Nav.vue";
-
+import { gsap } from "gsap";
 export default {
   name: "app",
   components: {
@@ -58,28 +64,44 @@ export default {
     return {
       open: false,
       scrollePosition: 0,
-      up:true,
+      up: true,
       metaInfo: {
-      title: 'About Us'
-    }
+        title: "About Us",
+      },
     };
   },
   mounted() {
     this.scroll();
     window.addEventListener("scroll", this.onScroll);
-    alert("Don't judge me I'm still working at it"
-    )
+    // alert("Don't judge me I'm still working at it"
+    // )
+    this.headerAnimation(".logo", -2000);
   },
   methods: {
+    headerAnimation(clas, y) {
+      gsap.fromTo(
+        clas,
+        {
+          y: y,
+          immediateRender: true
+        },
+        {
+          y: 0,
+          duration: 1.5,
+          ease: "elastic",
+          delay:1
+        }
+      );
+    },
     onScroll(e) {
       const windowTop =
         window.top.scrollY; /* or: e.target.documentElement.scrollTop */
       if (windowTop > this.scrollePosition) {
         this.scrollePosition = windowTop;
-        this.up=false;
+        this.up = false;
       } else {
         this.scrollePosition = windowTop;
-            this.up=true;
+        this.up = true;
       }
     },
     select(val) {

@@ -70,17 +70,17 @@
     </div>
   </div>
 </div>
-     <div class="text-left lg:h-full h-2/3 lg:w-2/3 w-full  ml-8 flex justify-center flex-col" >
-        
-          
-          <h1  class="title w-4/5 text-2xl  md:text-5xl  text-gray-400" data-text="Zakaria Megnioui" >   <p class="font-bold mb-2 text-xs md:text-sm md:mb-5" style="color:#139487 ">Hi, my name is</p>  Zakaria Megnioui</h1>
+     <div class="text-left lg:h-full h-2/3 lg:w-2/3 w-full   ml-8 flex justify-center flex-col" >
+                 
+          <h1  class="title name  w-4/5 text-2xl md:text-5xl  text-gray-400" data-text="Zakaria Megnioui" >   <p class="font-bold mb-2 text-xs md:text-sm md:mb-5" style="color:#139487 ">Hi, my name is</p>  Zakaria Megnioui</h1>
 
-          <h1  class="title text-2xl md:text-5xl w-4/5 text-gray-500 mt-2 md:mt-4">I build things for the web. <p
+          <h1  class="title domain text-2xl md:text-5xl w-4/5 text-gray-500 mt-2 md:mt-4">I build things for the web. <p
             class="font-bold  text-xs md:text-sm  text-gray-500  mt-2 md:mt-4"
           >I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.</p>
 </h1>
-          
-          <div id="container" class="w-4/5  mt-5 lg:mt-11">
+
+          <div id="container" class="button  w-4/5  mt-5 lg:mt-11">
+                      
             <button class="open-button w-36 hidden sm:block md:w-48" @click="click">
               <span class="circle w-full h-8 md:w-12 md:h-12" aria-hidden="true">
                 <span class="icon arrow"> </span>
@@ -115,6 +115,7 @@
     </div>
         </div>
     </div>
+     
     <div class="bottom w-full hidden md:block" style="height :20vh;">
         <svg
           class="waves"
@@ -137,11 +138,12 @@
             <use xlink:href="#gentle-wave" x="48" y="7" fill="#efefef" />
           </g>
         </svg>
+        
       </div>
     <!--Header ends-->
 
     <!--Content starts-->
-    <div class="content flex transform md:-translate-y-12  translate-y-12 ">
+   <div class="content mouse flex absolute -bottom-10  lg:bottom-5 z-50  ">
       <div class="scroll-down2"></div>
     </div>
     <!--Content ends-->
@@ -150,6 +152,7 @@
 
 <script>
 import Logo from "@/components/Logo.vue";
+import { gsap } from "gsap";
 
 export default {
   name: 'waves',
@@ -167,8 +170,43 @@ export default {
   ,
   mounted(){
    this.change()
+   this.textAnimation('.name' , -2000,3 ,1)
+      this.textAnimation('.domain' , 11000,3,1.3)
+      this.buttonAnimation('.button' , 11000,2,2.6)
+   this.textAnimation('.share-button' , -2000,2 ,2.8)
+      this.textAnimation('.card-avatar' , 1000,2,3)
+      this.buttonAnimation('.mouse' , -2000,2,0 ,)
+
   },
   methods: {
+     textAnimation(clas, x, duration, delay ) {
+      gsap.fromTo(
+        clas,
+        {
+          x: x,
+        },
+        {
+          x: 0,
+          duration: duration,
+          ease: "power1.out",
+           delay:delay
+        }
+      );
+    },
+    buttonAnimation(clas,y, duration, delay ) {
+      gsap.fromTo(
+        clas,
+        {
+         y:y,
+        },
+        {
+         y: 0,
+          duration: duration,
+          ease: "power1.out",
+           delay:delay
+        }
+      );
+    },
     click(){
     
       this.$emit('isopen', true)
