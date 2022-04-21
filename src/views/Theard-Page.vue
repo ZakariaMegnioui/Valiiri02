@@ -4,17 +4,17 @@
 
 
 <div class="images-leaning ">
-  <div>
-    <img src="@/assets/img/react.png" alt="Eleanor from The Good Place" />
+  <div class="image">
+    <img  src="@/assets/img/react.png" alt="Eleanor from The Good Place" />
   </div>
-  <div>
-    <img src="@/assets/img/laravel.png" alt="Chidi from The Good Place" />
+  <div class="image">
+    <img  src="@/assets/img/laravel.png" alt="Chidi from The Good Place" />
   </div>
-  <div>
-    <img src="@/assets/img/vue.png" alt="Jason from The Good Place" />
+  <div class="image">
+    <img  src="@/assets/img/vue.png" alt="Jason from The Good Place" />
   </div>
-  <div>
-    <img src="@/assets/img/spring.png" alt="Tahani from The Good Place" />
+  <div class="image">
+    <img  src="@/assets/img/spring.png" alt="Tahani from The Good Place" />
   </div>
   
 </div>
@@ -22,8 +22,31 @@
 </template>
 
 <script>
+import {gsap} from 'gsap';
 export default {
+ name:'cardsshadow'
+ ,
+ mounted(){
+    let tl = gsap
+      .timeline({
+        // yes, we can add it to an entire timeline!
+        scrollTrigger: {
+          trigger: ".theard",
+          start: "top bottom",
+          end: "center top",
+          scrub: false,
+          repeat: -1,
+          toggleActions: "restart none none reset",
+        },
+      })
+      .from(".image", {
+        scale: 0,
 
+        duration: 4,
+        delay: 0,
+       ease: "elastic",
+      })
+ }
 }
 </script>
 
