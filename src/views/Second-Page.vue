@@ -88,7 +88,7 @@ export default {
         x: valuex,
         scale: scale,
         rotation: 360,
-        duration: 5,
+        duration: 9,
         delay: delay,
         ease:'back'
       });
