@@ -1,16 +1,13 @@
 <template>
   <div class="project">
-    <div
- 
-      class="flex lg:text-9xl md:text-7xl text-6xl  h-28   justify-between w-full opacity-20"
-    >
+    <div class="flex lg:text-9xl md:text-7xl text-6xl h-28 justify-between w-full opacity-20">
       <h1 class="w-1/2 text-left text-gray-500">Work</h1>
       <h1 class="w-1/2 text-right" style="color:#139487">03</h1>
     </div>
-    <div class="card   w-2/5 relative " v-for="project in projects" :key="project.main">
+    <div class="card w-2/5 relative" v-for="(project , i) in projects" :ref="'card'+i" :key="i">
       <div class="imgBox">
         <img :src="require(`@/assets/img/${project.main}`)" alt />
-        <div class="video ">
+        <div class="video">
           <video autoplay muted loop id="bg">
             <source :src="require(`@/assets/videos/${project.video}`)" type="video/mp4" />
           </video>
@@ -23,14 +20,13 @@
             <br />
             <span class="md:text-sm text-xs lg:text-base">{{project.domain}}</span>
           </h2>
-          <ul class=" md:flex text-xs justify-between w-full hidden " >
-            <li v-for="( tech , i) in project.tech" :key="i">{{tech}}</li>   
-          
+          <ul class="md:flex text-xs justify-between w-full hidden">
+            <li v-for="( tech , i) in project.tech" :key="i">{{tech}}</li>
           </ul>
 
           <div class="social-icons">
-            <a  href="#">
-              <i  class="fa fa-facebook " aria-hidden="true"></i>
+            <a href="#">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
             <a :href="project.link" target="_blank">
               <i class aria-hidden="true">
@@ -47,17 +43,18 @@
         </div>
       </div>
     </div>
-    
+
     <!-- component -->
     <div class="mx-auto container md:px-24 px-7 lg:py-20 lg:px-36">
       <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
-      <dev class="text-white text-xl  lg:text-2xl ">
+      <dev class="text-white text-xl lg:text-2xl">
         <h1 class="mb-20">Other Noteworthy Projects</h1>
       </dev>
       <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
         <div class="rounded" v-for="( row , i ) in others" :key="i">
           <div
             v-for="(card , i) in row"
+            :ref="'smallCard'+i"
             :key="i"
             class="w-full hover:scale-105 h-80 flex drop-shadow-xl flex-col justify-between dark:bg-gray-800 bg-white dark:border-gray-700 rounded-lg border border-gray-400 mb-6 py-5 px-4 transition-all duration-100 ease-in-out"
           >
@@ -102,22 +99,22 @@
         </div>
       </div>
       <button
-      @click="showMore"
+        @click="showMore"
         class="transition-all p-2 pl-5 pr-5 m-6 duration-700 transform hover:bg-emerald-700 text-base rounded-lg focus:border-4"
         style="border:2px solid #00A99D; color:#00A99D"
       >{{show?'Show Less':'Show More' }}</button>
     </div>
-
   </div>
 </template>
 
 <script>
+import { gsap } from "gsap";
 export default {
-  name:'casestudy',
+  name: "casestudy",
   data() {
     return {
       link: require("@/assets/icons/link.svg"),
-      show:false,
+      show: false,
       projects: [
         {
           title: "Royimmo",
@@ -125,8 +122,7 @@ export default {
           main: "PR1.jpg",
           video: "roya.mp4",
           link: "https://royaimmo.ma/",
-          tech:['Laravel' , 'Vue JS' ,'tailwind' , 'element ui' , 'mysql'],
-
+          tech: ["Laravel", "Vue JS", "tailwind", "element ui", "mysql"],
         },
         {
           title: "Ajicod",
@@ -134,8 +130,7 @@ export default {
           main: "PR2.jpg",
           video: "ajicod.mp4",
           link: "https://ajicod.com/en",
-          tech:['Laravel'  ,'bootstrap' , 'mysql'],
-
+          tech: ["Laravel", "bootstrap", "mysql"],
         },
         {
           title: "AWID Livraison",
@@ -143,9 +138,7 @@ export default {
           main: "PR3.jpg",
           video: "awid.mp4",
           link: "https://awidlivraison.com/",
-          tech:['Laravel' , 'Vue JS' ,'tailwind' , 'element ui' , 'mysql'],
-
-  
+          tech: ["Laravel", "Vue JS", "tailwind", "element ui", "mysql"],
         },
       ],
       others: [
@@ -165,7 +158,6 @@ export default {
             subtitle: "Tailwind 2022",
             url: "https://github.com/ZakariaMegnioui/Netflix-landing-page",
           },
-         
         ],
         [
           {
@@ -182,7 +174,6 @@ export default {
             subtitle: "Tailwind 2022",
             url: "https://github.com/ZakariaMegnioui/tailwind-Dashboard-online-courses",
           },
-         
         ],
         [
           {
@@ -200,7 +191,6 @@ export default {
             subtitle: "tailwind CSS 2021",
             url: "https://github.com/ZakariaMegnioui/youtube-clone",
           },
-         
         ],
       ],
       more: [
@@ -211,37 +201,65 @@ export default {
           subtitle: "React js 2020",
           url: "https://github.com/ZakariaMegnioui/todo-list-",
         },
-       
+
         {
-            title: "Building a Movies website with react js , MDB",
-            iconLink: "https://movie-db-react-js.netlify.app/",
-            icon: require("@/assets/icons/movie.svg"),
-            subtitle: "React Js 2020",
-            url: "https://github.com/ZakariaMegnioui/Movie-Time",
-          },
-           {
-            title: "Crud php app , php , mvc , mysql",
-            iconLink: "",
-            icon: require("@/assets/icons/crud.svg"),
-            subtitle: "php 2022",
-            url: "https://github.com/ZakariaMegnioui/pdomvc",
-          },
+          title: "Building a Movies website with react js , MDB",
+          iconLink: "https://movie-db-react-js.netlify.app/",
+          icon: require("@/assets/icons/movie.svg"),
+          subtitle: "React Js 2020",
+          url: "https://github.com/ZakariaMegnioui/Movie-Time",
+        },
+        {
+          title: "Crud php app , php , mvc , mysql",
+          iconLink: "",
+          icon: require("@/assets/icons/crud.svg"),
+          subtitle: "php 2022",
+          url: "https://github.com/ZakariaMegnioui/pdomvc",
+        },
       ],
     };
   },
+  mounted() {
+    this.animate(this.$refs.card0);
+    this.animate(this.$refs.card1);
+    this.animate(this.$refs.card2);
+    this.animate(this.$refs.smallCard0);
+    this.animate(this.$refs.smallCard1);
+    this.animate(this.$refs.smallCard2);
+  
+  },
   methods: {
+    animate(element) {
+      gsap
+        .timeline({
+          // yes, we can add it to an entire timeline!
+          scrollTrigger: {
+            trigger: element,
+            start: "bottom bottom",
+            // end: "center top",
+            scrub: false,
+            repeat: -1,
+            toggleActions: "restart none none reset",
+          },
+        })
+        .from(element, {
+          opacity: 0,
+          duration: 1,
+          delay: 0,
+          ease: "power1.out",
+        });
+    },
     showMore() {
-      this.show=! this.show;
+      this.show = !this.show;
       if (this.show) {
-       this.others[0].push(this.more[0]);
-      this.others[1].push(this.more[1]);
-      this.others[2].push(this.more[2]);
+        this.others[0].push(this.more[0]);
+        this.others[1].push(this.more[1]);
+        this.others[2].push(this.more[2]);
       } else {
-         this.others[0].pop();
-      this.others[1].pop();
-      this.others[2].pop();
+        this.others[0].pop();
+        this.others[1].pop();
+        this.others[2].pop();
       }
-     
     },
   },
 };

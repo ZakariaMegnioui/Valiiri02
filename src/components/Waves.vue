@@ -72,14 +72,14 @@
 </div>
      <div class="text-left lg:h-full h-2/3 lg:w-2/3 w-full   ml-8 flex justify-center flex-col" >
                  
-          <h1   class="title z-50 name  w-4/5 text-2xl md:text-5xl  text-gray-400" data-text="Zakaria Megnioui" >   <p class="font-bold mb-2 text-xs md:text-sm md:mb-5" style="color:#139487 ">Hi, my name is</p>  Zakaria Megnioui</h1>
+          <h1   class="title z-20 name  w-4/5 text-2xl md:text-5xl  text-gray-400" data-text="Zakaria Megnioui" >   <p class="font-bold mb-2 text-xs md:text-sm md:mb-5" style="color:#139487 ">Hi, my name is</p>  Zakaria Megnioui</h1>
 
-          <h1  class="title  z-50 domain text-2xl md:text-5xl w-4/5 text-gray-500 mt-2 md:mt-4">I build things for the web. <p
+          <h1  class="title  z-20 domain text-2xl md:text-5xl w-4/5 text-gray-500 mt-2 md:mt-4">I build things for the web. <p
             class="font-bold  text-xs md:text-sm  text-gray-500  mt-2 md:mt-4"
           >I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.</p>
 </h1>
 
-          <div id="container " class="button z-50  w-4/5  mt-5 lg:mt-11">
+          <div id="container " class="button z-20  w-4/5  mt-5 lg:mt-11">
                       
             <button class="open-button w-36 hidden sm:block md:w-48" @click="click">
               <span class="circle w-full h-8 md:w-12 md:h-12" aria-hidden="true">
@@ -143,7 +143,7 @@
     <!--Header ends-->
 
     <!--Content starts-->
-   <div class="content mouse flex absolute -bottom-10  lg:bottom-5 z-50  ">
+   <div class="content mouse flex absolute -bottom-10  lg:bottom-5 z-20  ">
       <div class="scroll-down2"></div>
     </div>
     <!--Content ends-->
@@ -170,12 +170,12 @@ export default {
   ,
   mounted(){
    this.change()
-   this.textAnimation('.name' , -2000,3 ,1)
-      this.textAnimation('.domain' , 11000,3,1.3)
-      this.buttonAnimation('.button' , 11000,2,2.6)
-   this.textAnimation('.share-button' , -2000,2 ,2.8)
-      this.textAnimation('.card-avatar' , 1000,2,3)
-      this.buttonAnimation('.mouse' , -2000,2,0 ,)
+   this.textAnimation('.name' , -2000,3 ,6.5)
+      this.textAnimation('.domain' , 11000,3,6.8)
+      this.buttonAnimation('.button' , 1000,3,7.6)
+   this.textAnimation('.share-button' , -2000,2 ,7.8)
+      this.textAnimation('.card-avatar' , 1000,5,5)
+      this.buttonAnimation('.mouse' , -2000,2,5 )
 
   },
   methods: {
@@ -184,9 +184,11 @@ export default {
         clas,
         {
           x: x,
+          opacity:0
         },
         {
           x: 0,
+          opacity:1,
           duration: duration,
           ease: "power1.out",
            delay:delay
@@ -198,9 +200,11 @@ export default {
         clas,
         {
          y:y,
+         opacity:0,
         },
         {
          y: 0,
+         opacity:1,
           duration: duration,
           ease: "power1.out",
            delay:delay

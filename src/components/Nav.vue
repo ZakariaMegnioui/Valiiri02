@@ -50,7 +50,7 @@ export default {
   },
   mounted() {
     // LandPg.run();
-        this.headerAnimation(".hamburger-slim", -2000);
+        this.headerAnimation(".hamburger-slim", -200);
 
   },
   methods: {
@@ -65,7 +65,7 @@ export default {
           y: 0,
           duration: 1.5,
           ease: "elastic",
-          delay:1
+          delay:6
         }
       );
     },

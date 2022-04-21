@@ -1,5 +1,5 @@
 <template>
-  <div class="work">
+  <div class="work mt-10">
     <div class="container">
       <div class="box flex justify-center">
         <h1>“It is only when we take chances, when our lives improve. The initial and the most difficult risk that we need to take is to become honest.</h1>
