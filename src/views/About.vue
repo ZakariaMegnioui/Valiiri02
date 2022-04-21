@@ -38,37 +38,37 @@
           <div class="row">
             <!-- Skill Items Start -->
             <div class="skill-item">
-              <p>html</p>
-              <div class="progress inner-shadow">
-                <div class="progress-bar" style="width: calc(90% - 14px);">
-                  <span class>90%</span>
-                </div>
-              </div>
-            </div>
-            <!-- Skill Items End -->
-            <!-- Skill Items Start -->
-            <div class="skill-item">
-              <p>css3</p>
-              <div class="progress inner-shadow">
-                <div class="progress-bar" style="width: calc(80% - 14px);">
-                  <span>80%</span>
-                </div>
-              </div>
-            </div>
-            <!-- Skill Items End -->
-            <!-- Skill Items Start -->
-            <div class="skill-item">
-              <p>javaScript</p>
+              <p>Vuejs</p>
               <div class="progress inner-shadow">
                 <div class="progress-bar" style="width: calc(60% - 14px);">
-                  <span>60%</span>
+                  <span class>60%</span>
                 </div>
               </div>
             </div>
             <!-- Skill Items End -->
             <!-- Skill Items Start -->
             <div class="skill-item">
-              <p>bootstrap</p>
+              <p>Spring Boot</p>
+              <div class="progress inner-shadow">
+                <div class="progress-bar" style="width: calc(35% - 14px);">
+                  <span>35%</span>
+                </div>
+              </div>
+            </div>
+            <!-- Skill Items End -->
+            <!-- Skill Items Start -->
+            <div class="skill-item">
+              <p>React</p>
+              <div class="progress inner-shadow">
+                <div class="progress-bar" style="width: calc(40% - 14px);">
+                  <span>40%</span>
+                </div>
+              </div>
+            </div>
+            <!-- Skill Items End -->
+            <!-- Skill Items Start -->
+            <div class="skill-item">
+              <p>Laravel</p>
               <div class="progress inner-shadow">
                 <div class="progress-bar" style="width: calc(50% - 14px);">
                   <span>50%</span>
@@ -78,7 +78,7 @@
             <!-- Skill Items End -->
             <!-- Skill Items Start -->
             <div class="skill-item">
-              <p>git and Github</p>
+              <p>TailwindCss</p>
               <div class="progress inner-shadow">
                 <div class="progress-bar" style="width: calc(80% - 14px);">
                   <span>80%</span>
@@ -88,10 +88,10 @@
             <!-- Skill Items End -->
             <!-- Skill Items Start -->
             <div class="skill-item">
-              <p>react</p>
+              <p>JavaScript</p>
               <div class="progress inner-shadow">
-                <div class="progress-bar" style="width: calc(20% - 14px);">
-                  <span>20%</span>
+                <div class="progress-bar" style="width: calc(70% - 14px);">
+                  <span>70%</span>
                 </div>
               </div>
             </div>
@@ -109,12 +109,22 @@
                 <div class="small_one w-5/6 m-auto block md:hidden">
                   <div class="timeline-item-inner outer-shadow">
                     <i class="fas fa-briefcase icon"></i>
-                    <span>sep 18, 2018 - Present</span>
-                    <h3>full Stack Web Developer</h3>
-                    <h4>name company, Republica Dominicana</h4>
+                    <span>sep 18, 2020 - Present</span>
+                    <h3>front-end web Developer</h3>
+                    <h4>freelancer </h4>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem similique
-                      quod ut illum commodi nisi nemo fuga placeat iure.
+                     I've done some great things with amazing people
+                    </p>
+                  </div>
+                </div>
+                 <div class="small_one my-8 w-5/6 m-auto block md:hidden">
+                  <div class="timeline-item-inner outer-shadow">
+                    <i class="fas fa-briefcase icon"></i>
+                     <span> oct 2021</span>
+                    <h3>full stack</h3>
+                    <h4>Ajicod , Web Development , Digital Marketing</h4>
+                    <p>
+                     It was a great opportunity to work on big projects with a professional and beautiful team
                     </p>
                   </div>
                 </div>
@@ -122,12 +132,11 @@
                 <div class="timeline-item hidden md:block">
                   <div class="timeline-item-inner outer-shadow">
                     <i class="fas fa-briefcase icon"></i>
-                    <span>sep 18, 2018 - Present</span>
-                    <h3>full Stack Web Developer</h3>
-                    <h4>name company, Republica Dominicana</h4>
+                     <span>sep 18, 2020 - Present</span>
+                    <h3>front-end web Developer</h3>
+                    <h4>freelancer </h4>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem similique
-                      quod ut illum commodi nisi nemo fuga placeat iure.
+                     I've done some great things with amazing people
                     </p>
                   </div>
                 </div>
@@ -137,29 +146,17 @@
                 <div class="timeline-item hidden md:block">
                   <div class="timeline-item-inner outer-shadow">
                     <i class="fas fa-briefcase icon"></i>
-                    <span>sep 2016 - oct 2017</span>
-                    <h3>web designer</h3>
-                    <h4>name company, Republica Dominicana</h4>
+                    <span> oct 2021</span>
+                    <h3>full stack</h3>
+                    <h4>Ajicod , Web Development , Digital Marketing</h4>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem similique
-                      quod ut illum commodi nisi nemo fuga placeat iure.
+                     It was a great opportunity to work on big projects with a professional and beautiful team
                     </p>
                   </div>
                 </div>
                 <!--Timeline  Items End-->
                 <!--Timeline  Items Start-->
-                <div class="timeline-item hidden md:block">
-                  <div class="timeline-item-inner outer-shadow">
-                    <i class="fas fa-briefcase icon"></i>
-                    <span>sep 2014 - oct 2016</span>
-                    <h3>web designer UX</h3>
-                    <h4>name company, Republica Dominicana</h4>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem similique
-                      quod ut illum commodi nisi nemo fuga placeat iure.
-                    </p>
-                  </div>
-                </div>
+                
                 <!--Timeline  Items End-->
               </div>
             </div>
@@ -178,13 +175,10 @@
                 <div class="timeline-item hidden md:block">
                   <div class="timeline-item-inner outer-shadow">
                     <i class="fas fa-graduation-cap icon"></i>
-                    <span>18, 2018 - Present</span>
-                    <h3>university</h3>
-                    <h4>intec university, Republica Dominicana</h4>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem similique
-                      quod ut illum commodi nisi nemo fuga placeat iure.
-                    </p>
+                    <span>18, 2020 - Present</span>
+                    <h3>Stack Over Flow</h3>
+                   
+                   
                   </div>
                 </div>
                 <!--Timeline  Items End-->
@@ -192,13 +186,9 @@
                 <div class="timeline-item hidden md:block">
                   <div class="timeline-item-inner outer-shadow">
                     <i class="fas fa-graduation-cap icon"></i>
-                    <span>sep 2016 - oct 2017</span>
-                    <h3>high scholl and technical education</h3>
-                    <h4>polytechnic Padre Fantino, Republica Dominicana(Sanchez Ramirez)</h4>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem similique
-                      quod ut illum commodi nisi nemo fuga placeat iure.
-                    </p>
+                    <span>20 - oct 2021</span>
+                    <h3>Youtub</h3>
+                   
                   </div>
                 </div>
 
@@ -207,25 +197,34 @@
                 <div class="timeline-item hidden md:block">
                   <div class="timeline-item-inner outer-shadow">
                     <i class="fas fa-graduation-cap icon"></i>
-                    <span>sep 2014 - oct 2016</span>
-                    <h3>education initial</h3>
-                    <h4>Domitila Grullon, Republica Dominicana(La Vega)</h4>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem similique
-                      quod ut illum commodi nisi nemo fuga placeat iure.
-                    </p>
+                    <span> oct 2022</span>
+                    <h3>Laracast</h3>
+                    
+                    
+                  </div>
+                </div>
+                <div class="small_one block md:hidden  w-5/6 m-auto">
+                  <div class="timeline-item-inner outer-shadow">
+                    <i class="fas fa-graduation-cap icon"></i>
+                    <span>18, 2020 - Present</span>
+                    <h3>Stack Over Flow</h3>
+                   
+                  </div>
+                </div>
+                <div class="small_one block my-9 md:hidden w-5/6 m-auto">
+                  <div class="timeline-item-inner outer-shadow">
+                    <i class="fas fa-graduation-cap icon"></i>
+                     <span>20 - oct 2021</span>
+                    <h3>Youtub</h3>
+                   
                   </div>
                 </div>
                 <div class="small_one block md:hidden w-5/6 m-auto">
                   <div class="timeline-item-inner outer-shadow">
                     <i class="fas fa-graduation-cap icon"></i>
-                    <span>sep 2016 - oct 2017</span>
-                    <h3>high scholl and technical education</h3>
-                    <h4>polytechnic Padre Fantino, Republica Dominicana(Sanchez Ramirez)</h4>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem similique
-                      quod ut illum commodi nisi nemo fuga placeat iure.
-                    </p>
+                     <span> oct 2022</span>
+                    <h3>Laracast</h3>
+                   
                   </div>
                 </div>
                 <!--Timeline  Items End-->

@@ -4,14 +4,15 @@
     <Waves @isopen='isopen' />
 
   <dialog class="modal h-full w-11/12 m-auto  bg-gray-900" id="modal">
-    <div @click="isopen(false)" class=" h-8 w-8 p-2  float-right " style="color:#139487; ">
+  
+     <div @click="isopen(false)" class=" h-8 w-8 p-2   float-right " style="color:#139487; ">
  
 <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full  cursor-pointer"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 </svg>
     </div>
-     
   <Contact/>
+    
     </dialog>
    
 

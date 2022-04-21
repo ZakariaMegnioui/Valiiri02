@@ -6,7 +6,7 @@
  <h1 class="introtext text-gray-400 text-3xl">Valiiri02
       </h1>
       <p class="text-base text-gray-200 ">
-       Hi, I'm Zakaria Megniouia a Software Developer.
+       Hi, I'm Zakaria Megniouia a self-taught Software Developer.
         </p>
       <span class="text-base text-gray-200 ">
       ' I'm still working on it'
@@ -37,7 +37,7 @@
         <landing-page />
       </div>
       <Second />
-      <div id="services">
+      <div id="services" class="mb-4">
         <Services />
       </div>
       <Qoutes />

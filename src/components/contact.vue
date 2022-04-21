@@ -70,6 +70,8 @@
 </template>
 
 <script>
+import { gsap} from "gsap";
+
 export default {
   name: 'contactme',
 
@@ -78,6 +80,28 @@ export default {
             open:false,
             iconClass:'md:h-12 md:w-12 h-10 w-10'
         }
+    },
+    mounted(){
+   gsap
+        .timeline({
+          // yes, we can add it to an entire timeline!
+          scrollTrigger: {
+            trigger: ".contact",
+            start: "top bottom",
+            // end: "center top",
+            scrub: false,
+            repeat: -1,
+            toggleActions: "restart none none reset",
+          },
+        })
+         
+         .from(".contact", {
+          opacity:0,
+           
+          duration: 2,
+          delay: 1,
+          ease: "back",
+        });
     },
   methods:{
     //  contect(){

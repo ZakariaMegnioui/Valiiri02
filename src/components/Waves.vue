@@ -76,7 +76,7 @@
 
           <h1  class="title  z-20 domain text-2xl md:text-5xl w-4/5 text-gray-500 mt-2 md:mt-4">I build things for the web. <p
             class="font-bold  text-xs md:text-sm  text-gray-500  mt-2 md:mt-4"
-          >I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.</p>
+          >I am a self-taught front and backend developer located in Morocco. I like making fun ,interactive things with code. Well-organized person, problem solver, independent employee with high attention to detail..</p>
 </h1>
 
           <div id="container " class="button z-20  w-4/5  mt-5 lg:mt-11">

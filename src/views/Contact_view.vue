@@ -7,7 +7,9 @@
         style="color:#eff0f4"
       >Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
     </div>
+  
     <Contact />
+ 
     <a href="https://github.com/ZakariaMegnioui/Valiiri_v2" target="_blank">
       <h2 class="mb-6 lg:text-base md:text-sm text-xs">
         Designed & Built by Zakaria Megnioui
@@ -27,12 +29,12 @@ export default {
     Contact,
   },
     mounted() {
-      gsap
+    gsap
         .timeline({
           // yes, we can add it to an entire timeline!
           scrollTrigger: {
             trigger: ".contact_main",
-            start: "top center",
+            start: "top bottom",
             // end: "center top",
             scrub: false,
             repeat: -1,
@@ -42,24 +44,19 @@ export default {
          .from(".contact_main .header h1", {
           x: -1000,
          
-          duration: 0.5,
-          delay: 0,
+          duration: 1,
+          delay: 0.1,
           ease: "back",
         })
          .from(".contact_main .header p", {
           x: 1000,
         
-          duration: 0.5,
-          delay: 0,
-          ease: "back",
-        })
-        .from(".contact", {
-          scale: 0,
-          rotation: 360,
-          duration: 2,
-          delay: 0,
+          duration: 1,
+          delay: 0.1,
           ease: "back",
         });
+      
+       
     },
   
 };

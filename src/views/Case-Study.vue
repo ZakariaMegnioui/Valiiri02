@@ -4,7 +4,7 @@
       <h1 class="w-1/2 text-left text-gray-500">Work</h1>
       <h1 class="w-1/2 text-right" style="color:#139487">03</h1>
     </div>
-    <div class="card w-2/5 relative" v-for="(project , i) in projects" :ref="'card'+i" :key="i">
+    <div class="card w-2/5 relative md:m-14  m-16" v-for="(project , i) in projects" :ref="'card'+i" :key="i">
       <div class="imgBox">
         <img :src="require(`@/assets/img/${project.main}`)" alt />
         <div class="video">
@@ -45,7 +45,7 @@
     </div>
 
     <!-- component -->
-    <div class="mx-auto container md:px-24 px-7 lg:py-20 lg:px-36">
+    <div class=" bottomCards mx-auto container md:px-24 px-7 lg:py-20 lg:px-36">
       <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
       <dev class="text-white text-xl lg:text-2xl">
         <h1 class="mb-20">Other Noteworthy Projects</h1>
@@ -220,22 +220,22 @@ export default {
     };
   },
   mounted() {
-    this.animate(this.$refs.card0);
-    this.animate(this.$refs.card1);
-    this.animate(this.$refs.card2);
-    this.animate(this.$refs.smallCard0);
-    this.animate(this.$refs.smallCard1);
-    this.animate(this.$refs.smallCard2);
+    this.animate(this.$refs.card0, 0.1);
+    this.animate(this.$refs.card1 ,0.1);
+    this.animate(this.$refs.card2 ,0.1);
+    this.animate2(".bottomCards" ,  2);
+    // this.animate2(this.$refs.smallCard1 , 2.4);
+    // this.animate2(this.$refs.smallCard2 , 3);
   
   },
   methods: {
-    animate(element) {
+    animate(element , duration) {
       gsap
         .timeline({
           // yes, we can add it to an entire timeline!
           scrollTrigger: {
             trigger: element,
-            start: "bottom bottom",
+            start: "top bottom",
             // end: "center top",
             scrub: false,
             repeat: -1,
@@ -244,9 +244,29 @@ export default {
         })
         .from(element, {
           opacity: 0,
-          duration: 1,
+          duration: duration ,
           delay: 0,
           ease: "power1.out",
+        });
+    },
+      animate2(element , duration) {
+      gsap
+        .timeline({
+          // yes, we can add it to an entire timeline!
+          scrollTrigger: {
+            trigger: element,
+            start: "top bottom",
+            // end: "center top",
+            scrub: false,
+            repeat: -1,
+            toggleActions: "restart none none reset",
+          },
+        })
+        .from(element, {
+         scale: 0,
+          duration: duration ,
+          delay: 0,
+          ease: "back",
         });
     },
     showMore() {
