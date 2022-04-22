@@ -73,7 +73,7 @@
 import { gsap} from "gsap";
 
 export default {
-  name: 'contactme',
+  name: 'contactComp',
 
     data(){
         return{
