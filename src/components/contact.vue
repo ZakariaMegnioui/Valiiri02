@@ -1,6 +1,6 @@
 <template>
   <div class="contact-area " :class="open ? 'active ': ''" >
-  <div class="contact md:w-3/6 w-5/6 lg:w-2/6" >
+  <div class="contact md:w-3/6 w-5/6 lg:w-2/6 opacity-100" >
     <main>
       <section class="dark:bg-gray-800  ">
         <div class="content flex md:flex-row flex-col text-center md:text-left  ">
@@ -82,26 +82,26 @@ export default {
         }
     },
     mounted(){
-   gsap
-        .timeline({
-          // yes, we can add it to an entire timeline!
-          scrollTrigger: {
-            trigger: ".contact",
-            start: "top bottom",
-            // end: "center top",
-            scrub: false,
-            repeat: -1,
-            toggleActions: "restart none none reset",
-          },
-        })
+  //  gsap
+  //       .timeline({
+  //         // yes, we can add it to an entire timeline!
+  //         scrollTrigger: {
+  //           trigger: ".contact",
+  //           start: "top bottom",
+  //           // end: "center top",
+  //           scrub: false,
+  //           repeat: -1,
+  //           toggleActions: "restart none none reset",
+  //         },
+  //       })
          
-         .from(".contact", {
-          opacity:0,
+  //        .from(".contact", {
+  //         opacity:0,
            
-          duration: 2,
-          delay: 1,
-          ease: "back",
-        });
+  //         duration: 2,
+  //         delay: 1,
+  //         ease: "back",
+  //       });
     },
   methods:{
     //  contect(){
