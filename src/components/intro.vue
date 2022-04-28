@@ -1,105 +1,19 @@
 <template>
- <div class="macbook">
-  <div class="inner">
-    <div class="screen">
-      <div class="face-one">
-        <div class="camera"></div>
-        <div class="display">
-          <div class="shade"></div>
-        </div>
-        <span>MacBook Air</span>
-      </div>
-      <img src="http://www.clker.com/cliparts/i/s/H/f/4/T/apple-logo-white.svg" class="logo" />
-    </div>
-    <div class="body">
-      <div class="face-one">
-        <div class="touchpad">
-        </div>
-        <div class="keyboard">
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key space"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-          <div class="key f"></div>
-        </div>
-      </div>
-      <div class="pad one"></div>
-      <div class="pad two"></div>
-      <div class="pad three"></div>
-      <div class="pad four"></div>
-    </div>
-  </div>
-  <div class="shadow"></div>
+<div>
+<div class="stack">
+  <div class="stack-layer five shadow"></div>
+  <div class="stack-layer five pink"></div>
+  <div class="stack-layer four orange"></div>
+  <div class="stack-layer three teal"></div>
+  <div class="stack-layer two blue"></div>
+  <div class="stack-layer one purple"></div>
+</div>
+<div class="text text-gray-200">
+  I'm still working on it <br>
+  Designed & Built by <a class="underline underline-offset-1" href="https://flowcv.me/zakaria-megnioui" target="_blank" >Zakaria Megnioui</a> 
+
+
+</div>
 </div>
 
 </template>
@@ -110,395 +24,117 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 
-.macbook {
-  width: 150px;
-  height: 96px;
-  position: absolute;
+
+@use postcss-cssnext;
+
+
+
+.stack {
+  height: 208px;
+  margin: 64px auto 48px;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 128px;
+}
+
+.stack-layer {
+  animation-name: float;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  border-radius: 16px;
+  height: 128px;
   left: 50%;
-  top: 50%;
-  margin: -75px 0 0 -48px;
-  perspective: 500px;
-  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%) rotateX(60deg) rotateZ(45deg);
+  width: 128px;
+}
+
+.text {
+  text-align: center;
+  
+ 
+}
+
+.button {
+  -webkit-appearance: none;
+  background: #FFFFFF;
+  border: 1px solid #C4C7CA;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+  border-radius: 4px;
+  display: block;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  margin: 1.5em auto;
+  padding: 0.75em 1.5em;
+  transition: border-color 200ms;
+  
+  &:hover {
+    border-color: #949698;
+  }
+}
+
+.blue {
+  background-image: linear-gradient(45deg, #584EB0 0%, #42A4B2 100%);
+  opacity: 0.9;
+  top: 24px;
+}
+.orange {
+  background-image: linear-gradient(-90deg, #A34162 0%, #FF7237 100%);
+  opacity: 0.8;
+  top: 72px;
+}
+.pink {
+  background-image: linear-gradient(45deg, rgba(182,50,127,0.93) 0%, #7F4EB0 100%);
+  opacity: 0.5;
+  top: 96px;
+}
+.purple {
+  background-image: linear-gradient(45deg, rgba(182,50,127,0.93) 0%, #7F4EB0 100%);
 }
 .shadow {
-  position: absolute;
-  width: 60px;
-  height: 0px;
-  left: 40px;
-  top: 160px;
-  transform: rotateX(80deg) rotateY(0deg) rotateZ(0deg);
-  box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
-  animation: shadow infinite 7s ease;
+  animation-name: cast;
+  background-color: black;
+  box-shadow: 0 0 48px 48px black;
+  height: 48px;
+  opacity: 0.2;
+  top: 172px;
+  width: 48px;
 }
-.inner {
-  z-index: 20;
-  position: absolute;
-  width: 150px;
-  height: 96px;
-  left: 0;
-  top: 0;
-  transform-style: preserve-3d;
-  transform:rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
-  animation: rotate infinite 7s ease;
-}
-.screen {
-  width: 150px;
-  height: 96px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border-radius: 7px;
-  background: #ddd;
-  transform-style: preserve-3d;
-  transform-origin: 50% 93px;
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  animation: lid-screen infinite 7s ease;
-  background-image: linear-gradient(45deg, rgba(0,0,0,0.34) 0%,rgba(0,0,0,0) 100%);
-  background-position: left bottom;
-  background-size: 300px 300px;
-  box-shadow: inset 0 3px 7px rgba(255,255,255,0.5);
-}
-.screen .logo {
-  position: absolute;
-  width: 20px;
-  height: 24px;
-  left: 50%;
-  top: 50%;
-  margin: -12px 0 0 -10px;
-  transform: rotateY(180deg) translateZ(0.1px);
-}
-.screen .face-one {
-  width: 150px;
-  height: 96px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border-radius: 7px;
-  background: #d3d3d3;
-  transform: translateZ(2px);
-  background-image: linear-gradient(45deg,rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
-}
-.screen .face-one .camera {
-  width: 3px;
-  height: 3px;
-  border-radius: 100%;
-  background: #000;
-  position: absolute;
-  left: 50%;
-  top: 4px;
-  margin-left: -1.5px;
-}
-.screen .face-one .display {
-  width: 130px;
-  height: 74px;
-  margin: 10px;
-  background: url("https://upload.wikimedia.org/wikipedia/en/9/98/MacOS_Monterey_Desktop.png") no-repeat center center #000;
-  background-size: 100% 100%;
-  border-radius: 1px;
-  position: relative;
-  box-shadow: inset 0 0 2px rgba(0,0,0,1);
-}
-.screen .face-one .display .shade {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 130px;
-  height: 74px;
-  background: linear-gradient(-135deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 47%,rgba(255,255,255,0) 48%);
-  animation: screen-shade infinite 7s ease;
-  background-size: 300px 200px;
-  background-position: 0px 0px;
-}
-.screen .face-one span {
-  position: absolute;
-  top: 85px;
-  left: 57px;
-  font-size: 6px;
-  color: #666
+.teal {
+  background-image: linear-gradient(-116deg, #37D8D5 0%, #39C48C 100%);
+  opacity: 0.9;
+  top: 48px;
 }
 
-.body {
-  width: 150px;
-  height: 96px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border-radius: 7px;
-  background: #cbcbcb;
-  transform-style: preserve-3d;
-  transform-origin: 50% bottom;
-  transform: rotateX(-90deg);
-  animation: lid-body infinite 7s ease;
-  background-image: linear-gradient(45deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+.two {
+  animation-delay: 100ms;
 }
-.body .face-one {
-  width: 150px;
-  height: 96px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border-radius: 7px;
-  transform-style: preserve-3d;
-  background: #dfdfdf;
-  animation: lid-keyboard-area infinite 7s ease;
-  transform: translateZ(-2px);
-  background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+.three {
+  animation-delay: 200ms;
 }
-.body .touchpad {
-  width: 40px;
-  height: 31px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  border-radius: 4px;
-  margin: -44px 0 0 -18px;
-  background: #cdcdcd;
-  background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
-  box-shadow: inset 0 0 3px #888;
+.four {
+  animation-delay: 300ms;
 }
-.body .keyboard {
-width: 130px;
-height: 45px;
-position: absolute;
-left: 7px;
-top: 41px;
-border-radius: 4px;
-transform-style: preserve-3d;
-background: #cdcdcd;
-background-image: linear-gradient(30deg, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
-box-shadow: inset 0 0 3px #777;
-padding: 0 0 0 2px;
-}
-.keyboard .key {
-  width: 6px;
-  height: 6px;
-  background: #444;
-  float: left;
-  margin: 1px;
-  transform: translateZ(-2px);
-  border-radius: 2px;
-  box-shadow: 0 -2px 0 #222;
-  animation: keys infinite 7s ease;
-}
-.key.space {
-  width: 45px;
-}
-.key.f {
-  height: 3px;
-}
-.body .pad {
-  width: 5px;
-  height: 5px;
-  background: #333;
-  border-radius: 100%;
-  position: absolute;
-}
-.pad.one {
-  left: 20px;
-  top: 20px;
-}
-.pad.two {
-  right: 20px;
-  top: 20px;
-}
-.pad.three {
-  right: 20px;
-  bottom: 20px;
-}
-.pad.four {
-  left: 20px;
-  bottom: 20px;
+.five {
+  animation-delay: 400ms;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
-  }
-  5% {
-    transform: rotateX(-20deg) rotateY(-20deg) rotateZ(0deg);
-  }
-  20% {
-    transform: rotateX(30deg) rotateY(200deg) rotateZ(0deg);
-  }
-  25% {
-    transform: rotateX(-60deg) rotateY(150deg) rotateZ(0deg);
-  }
-  60% {
-    transform: rotateX(-20deg) rotateY(130deg) rotateZ(0deg);
-  }
-  65% {
-    transform: rotateX(-20deg) rotateY(120deg) rotateZ(0deg);
-  }
-  80% {
-    transform: rotateX(-20deg) rotateY(375deg) rotateZ(0deg);
-  }
-  85% {
-    transform: rotateX(-20deg) rotateY(357deg) rotateZ(0deg);
-  }
-  87% {
-    transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg);
-  }
-}
-
-@keyframes lid-screen {
-  0% {
-    transform: rotateX(0deg);
-    background-position: left bottom;
-  }
-  5% {
-    transform: rotateX(50deg);
-    background-position: left bottom;
-  }
-  20% {
-    transform: rotateX(-90deg);
-    background-position: -150px top;
-  }
-  25% {
-    transform: rotateX(15deg);
-    background-position: left bottom;
-  }
-  30% {
-    transform: rotateX(-5deg);
-    background-position: right top;
-  }
-  38% {
-    transform: rotateX(5deg);
-    background-position: right top;
-  }
-  48% {
-    transform: rotateX(0deg);
-    background-position: right top;
-  }
-  90% {
-    transform: rotateX(0deg);
-    background-position: right top;
-  }
-  100% {
-    transform: rotateX(0deg);
-    background-position: right center;
-  }
-}
-
-@keyframes lid-body {
-  0% {
-    transform: rotateX(-90deg);
-    
-  }
+@keyframes float {
   50% {
-    transform: rotateX(-90deg);
-    
-  }
-  100% {
-    transform: rotateX(-90deg);
-    
+    transform: translate(-50%, -24px) rotateX(60deg) rotateZ(45deg);
   }
 }
 
-@keyframes lid-keyboard-area {
-  0% {
-     background-color: #dfdfdf;
-  }
+@keyframes cast {
   50% {
-    background-color: #bbb;
-  }
-  100% {
-    background-color: #dfdfdf;
+    opacity: 0.08;
+    transform: scale(1.1) translateX(-50%) rotateX(60deg) rotateZ(45deg);
   }
 }
-@keyframes screen-shade {
-  0% {
-    background-position: -20px 0px;
-  }
-  5% {
-    background-position: -40px 0px;
-  }
-  20% {
-    background-position: 200px 0;
-  }
-  50% {
-    background-position: -200px 0;
-  }
-  80% {
-    background-position: 0px 0px;
-  }
-  85% {
-    background-position: -30px 0;
-  }
-  90% {
-    background-position: -20px 0;
-  }
-  100% {
-    background-position: -20px 0px;
-  }
-}
-@keyframes keys {
-  0% {
-    box-shadow: 0 -2px 0 #222;
-  }
-  5% {
-    box-shadow: 1 -1px 0 #222;
-  }
-  20% {
-    box-shadow: -1px 1px 0 #222;
-  }
-  25% {
-    box-shadow: -1px 1px 0 #222;
-  }
-  60% {
-    box-shadow: -1px 1px 0 #222;
-  }
-  80% {
-    box-shadow: 0 -2px 0 #222;
-  }
-  85% {
-    box-shadow: 0 -2px 0 #222;
-  }
-  87% {
-    box-shadow: 0 -2px 0 #222;
-  }
-  100% {
-    box-shadow: 0 -2px 0 #222;
-  }
-}
-@keyframes shadow {
-  0% {
-    transform: rotateX(80deg) rotateY(0deg) rotateZ(0deg);
-    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
-  }
-  5% {
-    transform: rotateX(80deg) rotateY(10deg) rotateZ(0deg);
-    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
-  }
-  20% {
-    transform: rotateX(30deg) rotateY(-20deg) rotateZ(-20deg);
-    box-shadow: 0 0 50px 30px rgba(0,0,0,0.3);
-  }
-  25% {
-    transform: rotateX(80deg) rotateY(-20deg) rotateZ(50deg);
-    box-shadow: 0 0 35px 15px rgba(0,0,0,0.1);
-  }
-  60% {
-    transform: rotateX(80deg) rotateY(0deg) rotateZ(-50deg) translateX(30px);
-    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
-  }
-  100% {
-    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
-  }
-}
-.links {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-.links a {
-  color : #555;
-  margin-left: 10px;
-  text-decoration: none;
-}
-
+ 
 </style>

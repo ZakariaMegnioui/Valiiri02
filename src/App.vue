@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div class="intro absolute bg-teal-900">
+    <div class="intro">
       <Intro />
-      <div class="transform translate-y-28  flex justify-around align-middle flex-col w-full h-1/3">
+      <!-- <div class="transform translate-y-28  flex justify-around align-middle flex-col w-full h-1/3">
  <h1 class="introtext text-gray-400 text-3xl">Valiiri02
       </h1>
       <p class="text-base text-gray-200 ">
@@ -11,7 +11,7 @@
       <span class="text-base text-gray-200 ">
       ' I'm still working on it'
         </span>
-      </div>
+      </div> -->
      
     </div>
     <div class="portfolio">
@@ -32,7 +32,7 @@
           <Nav @select="select" />
         </div>
       </div>
-      <header class="w-full md:h-20 h-7 lg:h-2"></header>
+      <header class="w-full md:h-20 h-7 lg:h-2 bg-gradient-to-r from-purple-900 via-indigo-800 to-indigo-900"></header>
       <div id="home">
         <landing-page />
       </div>
@@ -130,7 +130,7 @@ export default {
 
           duration: 2,
 
-          delay: 4,
+          delay:20,
         }
       );
       this.start = true;
@@ -200,33 +200,19 @@ export default {
   overflow-x: hidden;
   background-color: #efefef;
 }
-header {
-  background: #0f0c29; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #24243e,
-    #302b63,
-    #0f0c29
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #24243e,
-    #302b63,
-    #0f0c29
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+
 .intro {
-  height: 100vh;
-  width: 100%;
+   display: flex;
+	 align-items: center;
+   justify-content: center;
+	 background: linear-gradient(to bottom right, #070630 0%, #060454 100%);
+   overflow: hidden;
+	 min-height: 100vh;
+   width: 100%;
+   position: absolute;
   z-index: 99999;
   
 }
 
-.introtext {
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
-    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
-    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
-    0 20px 20px rgba(0, 0, 0, 0.15);
-}
+
 </style>
