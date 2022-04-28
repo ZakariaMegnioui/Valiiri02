@@ -80,19 +80,21 @@
 </h1>
 
           <div id="container " class="button z-20  w-4/5  mt-5 lg:mt-11">
-                      
-            <button class="open-button w-36 hidden sm:block md:w-48" @click="click">
+                        <a href='https://flowcv.me/zakaria-megnioui' target="_blanck">
+            <button class="open-button w-36 hidden sm:block md:w-48" >
               <span class="circle w-full h-8 md:w-12 md:h-12" aria-hidden="true">
                 <span class="icon arrow"> </span>
               </span>
            
-              <span class="button-text ">Contact Me </span>
+              <span class="button-text tracking-widest	">Resume </span>
              
             </button>
-            <button @click="click"  style="background: #139487;" class="open-button px-6 py-1 rounded-md text-white block sm:hidden">
-              Contact Me
+            <button   style="background: #139487;" class="open-button px-6 py-1 rounded-md text-white block sm:hidden">
+              Resume
             </button>
+            </a>
           </div>
+      
         </div>
         <div class="lg:h-full h-1/3 w-full lg:w-1/3 flex justify-center">
      
@@ -211,10 +213,7 @@ export default {
         }
       );
     },
-    click(){
-    
-      this.$emit('isopen', true)
-    },
+   
     change() {
       const items = document.getElementById("myAvatar");
 

@@ -1,10 +1,10 @@
 <template>
   <div class="navigation">
-    <div @click="open=!open" :class="open ?'turnafter turnbefor':''" class="hamburger-slim cursor-pointer "></div>
+    <div @click="activate" :class="open ?'turnafter turnbefor':''" class="hamburger-slim cursor-pointer "></div>
 
     <div class="navigation__background" :class="open ? 'scale ' : ''">&nbsp;</div>
 
-    <nav class="navigation__nav fixed" :class="open ? 'w-full opacity-100 top top-0 left-0' : 'w-0 opacity-0 -left-56 -top-96'">
+    <nav class="navigation__nav fixed" :class="open ? 'w-full opacity-100 top top-0 left-0' : 'w-0 opacity-0 -left-96 -top-96'">
       <ul class="navigation__list md:text-5xl text-2xl lg:text-7xl" >
         <li @click="selector('home')"  class="navigation__item">
           <a  class="navigation__link">
