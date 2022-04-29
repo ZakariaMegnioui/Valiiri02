@@ -7,7 +7,7 @@
 
  
 
-<ul class="cards lg:mb-24 h-full lg:h-5/6">
+<ul class="card_services lg:mb-24 h-full lg:h-5/6">
   <li class="card " :class="hover_service_card" style="--accent-color: #D00903">
     <div class="icon"><i class="fa-regular fa-mobile-notch"></i></div>
     <div class="title">Front-end </div>
@@ -51,7 +51,7 @@ export default {
         toggleActions: "restart none none reset",
       },
     })
-    .from(".cards", {
+    .from(".card_services", {
      
       scale:0,
       duration: 2,

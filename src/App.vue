@@ -1,17 +1,11 @@
 <template>
   <div id="app">
-    <div class="intro">
+    <div>
+      
+    </div>
+    <div class="intro" :class="setBackground">
       <Intro />
-      <!-- <div class="transform translate-y-28  flex justify-around align-middle flex-col w-full h-1/3">
- <h1 class="introtext text-gray-400 text-3xl">Valiiri02
-      </h1>
-      <p class="text-base text-gray-200 ">
-       Hi, I'm Zakaria Megniouia a self-taught Software Developer.
-        </p>
-      <span class="text-base text-gray-200 ">
-      ' I'm still working on it'
-        </span>
-      </div> -->
+ 
      
     </div>
     <div class="portfolio">
@@ -32,7 +26,7 @@
           <Nav @select="select" />
         </div>
       </div>
-      <header class="w-full md:h-20 h-7 lg:h-2 bg-gradient-to-r from-purple-900 via-indigo-800 to-indigo-900"></header>
+      <header class="w-full md:h-20 h-7 lg:h-2 " :class="setBackground"></header>
       <div id="home">
         <landing-page />
       </div>
@@ -93,6 +87,13 @@ export default {
       },
     };
   },
+  
+  computed: {
+    setBackground() {
+      //  this.$store.commit('user/SET_DIALOG', false)
+      return this.$store.state.background;
+    },
+  },
   mounted() {
     this.scroll();
     window.addEventListener("scroll", this.onScroll);
@@ -130,7 +131,7 @@ export default {
 
           duration: 2,
 
-          delay:20,
+          delay:5,
         }
       );
       this.start = true;
@@ -205,7 +206,7 @@ export default {
    display: flex;
 	 align-items: center;
    justify-content: center;
-	 background: linear-gradient(to bottom right, #070630 0%, #060454 100%);
+
    overflow: hidden;
 	 min-height: 100vh;
    width: 100%;
