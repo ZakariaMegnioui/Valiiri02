@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <div>
-      
-    </div>
+   
     <div class="intro" :class="setBackground">
       <Intro />
  
@@ -46,6 +44,9 @@
         <ContactView />
       </div>
     </div>
+     <div class="fixed -right-32 top-72 transform -translate-y-3">
+       <ButtonTab/>
+    </div>
   </div>
 </template>
 <script>
@@ -58,12 +59,13 @@ import Qoutes from "./views/Qoutes.vue";
 import CaseStudy from "./views/Case-Study.vue";
 import ContactView from "./views/Contact_view.vue";
 import Intro from "./components/intro.vue";
-
+import ButtonTab from "./components/tab_botton.vue";
 import Nav from "./components/Nav.vue";
 import { gsap } from "gsap";
 export default {
   name: "app",
   components: {
+    ButtonTab,
     Intro,
     LandingPage,
     Second,

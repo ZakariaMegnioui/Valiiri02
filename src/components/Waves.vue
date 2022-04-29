@@ -75,7 +75,7 @@
 
         <div id="container " class="button z-20 w-4/5 mt-5 lg:mt-11">
           <a href="https://flowcv.me/zakaria-megnioui" target="_blanck">
-            <button class="open-button w-36 hidden sm:block md:w-48">
+            <button class="open-button w-36 hidden lg:block md:w-48">
               <span class="circle w-full h-8 md:w-12 md:h-12" aria-hidden="true">
                 <span class="icon arrow"></span>
               </span>
@@ -84,7 +84,7 @@
             </button>
             <button
               style="background: #139487;"
-              class="open-button px-6 py-1 rounded-md text-white block sm:hidden"
+              class="open-button px-6 py-1 rounded-md text-white block lg:hidden"
             >Resume</button>
           </a>
         </div>

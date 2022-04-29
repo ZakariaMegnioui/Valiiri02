@@ -9,17 +9,17 @@
 
 <ul class="card_services lg:mb-24 h-full lg:h-5/6">
   <li class="card " :class="hover_service_card" style="--accent-color: #D00903">
-    <div class="icon"><i class="fa-regular fa-mobile-notch"></i></div>
+    <div class="icon"><i class="fa fa-html5"></i></div>
     <div class="title">Front-end </div>
     <div class="content">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</div>
   </li>
   <li class="card" :class="hover_service_card" style="--accent-color: #EC9E38">
-    <div class="icon"><i class="fa-regular fa-lightbulb"></i></div>
+    <div class="icon"><i class="fa fa-internet-explorer"></i></div>
     <div class="title">Web Development</div>
     <div class="content">I use various web technologies to develop attractive websites which converts visitors to customers.</div>
   </li>
   <li class="card" :class="hover_service_card" style="--accent-color: #64BECF">
-    <div class="icon"><i class="fa-regular fa-bow-arrow"></i></div>
+    <div class="icon"><i class="fa fa-mobile"></i></div>
     <div class="title">MOBILE FRIENDLY</div>
     <div class="content">A responsive design make your website accessible o all users, regardless of their device .</div>
   </li>

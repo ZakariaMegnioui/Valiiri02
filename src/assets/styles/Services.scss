@@ -22,7 +22,7 @@
     position: relative;
 }
 
-img { max-width: 100%}
+.card_services img { max-width: 100%}
 
 .card_services{
   display: flex;
@@ -35,7 +35,6 @@ img { max-width: 100%}
 }
 .card_services .card{
   display: flex;
-  overflow: hidden;
   flex-direction: column;
   --iconS: 6rem;
   --iconOffsetX: calc(var(--iconS) / 4);

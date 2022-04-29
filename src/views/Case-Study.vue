@@ -64,7 +64,7 @@
               >{{card.title}}</h3>
             </div>
             <div class="w-full h-36 flex justify-center">
-              <img :src="card.icon" />
+              <img  class="w-full h-full" :src="card.icon" />
             </div>
             <div>
               <div class="mb-3 flex items-center">
