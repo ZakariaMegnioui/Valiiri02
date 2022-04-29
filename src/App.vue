@@ -44,7 +44,7 @@
         <ContactView />
       </div>
     </div>
-     <div class="fixed -right-32 top-72 transform -translate-y-3">
+     <div class="sidebar fixed -right-32 top-72 transform -translate-y-3">
        <ButtonTab/>
     </div>
   </div>
@@ -101,10 +101,12 @@ export default {
     window.addEventListener("scroll", this.onScroll);
     this.seence();
     this.intro();
-    this.headerAnimation(".logoo", -200);
+    this.headerAnimation(".logoo", -200,6 ,"elastic");
+        this.headerAnimation(".sidebar", -1000,9, 'Power2.ease');
+
   },
   methods: {
-    headerAnimation(clas, y) {
+    headerAnimation(clas, y , delay , anime) {
       gsap.fromTo(
         clas,
         {
@@ -114,8 +116,8 @@ export default {
         {
           y: 0,
           duration: 1.5,
-          ease: "elastic",
-          delay: 6,
+          ease: anime,
+          delay: delay,
         }
       );
     },
