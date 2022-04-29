@@ -1,47 +1,29 @@
 <template>
   <div class="case">
-    <div class="SER lg:text-9xl md:text-7xl text-6xl h-28 flex justify-between w-full">
+    <div class="opacity-25 lg:text-9xl md:text-7xl text-6xl h-28 flex justify-between w-full">
       <h1 class="w-1/2 text-left">Services</h1>
       <h1 class="w-1/2 text-right" style="color:#139487">01</h1>
     </div>
 
-    <div class="wrapper">
-      <ul class="background-shapes">
-        <li v-for="(item , i ) in shapes" :key="i" :class="'shape '+item"></li>
-      </ul>
-    </div>
-    <div class="row1-container relative">
-      <div class="box box-down cyan lg:translate-y-12" :class="hover_service_card">
-        <h2>MOBILE FRIENDLY</h2>
-        <p>A responsive design make your website accessible o all users, regardless of their device</p>
-        <img class="hidden md:block" :src="mobile" />
-      </div>
+ 
 
-      <div class="box red lg:translate-y-12" :class="hover_service_card">
-        <h2 class="uppercase">Front-end Developer</h2>
-        <p
-          class="mb-3"
-        >I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
-        <img class="hidden md:block" :src="front_end" alt />
-      </div>
-
-      <div class="box box-down blue lg:translate-y-10" :class="hover_service_card">
-        <h2 class="uppercase">Website Design</h2>
-        <p
-          class="lg:mb-3"
-        >I value simple content structure, clean design patterns, and thoughtful interactions.</p>
-        <img class="hidden md:block" :src="design" alt />
-      </div>
-    </div>
-    <div class="row2-container lg:translate-y-14">
-      <div class="box orange" :class="hover_service_card">
-        <h2 class="uppercase">Website Development</h2>
-        <p
-          class="lg:mb-3"
-        >I use various web technologies to develop attractive websites which converts visitors to customers</p>
-        <img class="hidden md:block" :src="web" alt />
-      </div>
-    </div>
+<ul class="cards lg:mb-24 h-full lg:h-5/6">
+  <li class="card " :class="hover_service_card" style="--accent-color: #D00903">
+    <div class="icon"><i class="fa-regular fa-mobile-notch"></i></div>
+    <div class="title">Front-end </div>
+    <div class="content">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</div>
+  </li>
+  <li class="card" :class="hover_service_card" style="--accent-color: #EC9E38">
+    <div class="icon"><i class="fa-regular fa-lightbulb"></i></div>
+    <div class="title">Web Development</div>
+    <div class="content">I use various web technologies to develop attractive websites which converts visitors to customers.</div>
+  </li>
+  <li class="card" :class="hover_service_card" style="--accent-color: #64BECF">
+    <div class="icon"><i class="fa-regular fa-bow-arrow"></i></div>
+    <div class="title">MOBILE FRIENDLY</div>
+    <div class="content">A responsive design make your website accessible o all users, regardless of their device .</div>
+  </li>
+</ul>
   </div>
 </template>
 
@@ -51,27 +33,10 @@ import { gsap } from "gsap";
 export default {
   data() {
     return {
-      shapes: [
-        "square",
-        "circle",
-        "triangle",
-        "triangle",
-        "circle",
-        "square",
-        "triangle",
-        "triangle",
-        "circle",
-        "square",
-        "triangle",
-        "circle",
-        "triangle",
-      ],
-      mobile: require("@/assets/icons/mobile.svg"),
-      design: require("@/assets/icons/design.svg"),
-      front_end: require("@/assets/icons/front-end.svg"),
-      web: require("@/assets/icons/web.svg"),
+   
+     
       hover_service_card:
-        "cursor-pointer  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 duration-300",
+        " md:w-2/3 lg:w-1/5 w-full pb-16 lg:pb-0   cursor-pointer  transition ease-in-out delay-150 hover:scale-105   duration-500",
     };
   },
   mounted() {
@@ -86,25 +51,20 @@ export default {
         toggleActions: "restart none none reset",
       },
     })
-    .from(".row1-container", {
+    .from(".cards", {
      
       scale:0,
       duration: 2,
       delay: 0,
-      
-    }).
-    from(".row2-container", {
-     
-      scale:0,
-      rotation:360,
-      duration: 2,
-      delay: 0,
-      ease: "back",
+       ease: "back",
     })
+   
   },
 };
 </script>
 
 <style scoped>
 @import "@/assets/styles/Services.scss";
+
+
 </style>
