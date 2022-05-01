@@ -44,7 +44,7 @@
         <ContactView />
       </div>
     </div>
-     <div class="sidebar sm:block xs:hidden fixed -right-32 top-72 transform -translate-y-3">
+     <div class="sidebar md:block hidden fixed -right-32 top-72 transform -translate-y-3">
        <ButtonTab/>
     </div>
   </div>

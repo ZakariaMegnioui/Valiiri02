@@ -4,7 +4,42 @@
       <h1 class="w-1/2 text-left text-gray-500">Work</h1>
       <h1 class="w-1/2 text-right" style="color:#139487">03</h1>
     </div>
-    <div class="card w-2/5 relative md:m-14  m-16" v-for="(project , i) in projects" :ref="'card'+i" :key="i">
+    
+<div class="container block md:hidden max-w-7xl mx-auto px-4" style="cursor: auto;">
+
+  <div class="flex flex-wrap" v-for="(project , i) in projects" :ref="'card'+i" :key="i">
+    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+      <div class="px-6">
+        <img alt="John Doe" :src="require(`@/assets/img/${project.main}`)" class="rounded-xl shadow-lg max-w-full h-auto align-middle border-none ">
+        <div class="pt-6 text-center">
+          <h1 class="text-gray-200 text-xl  font-bold leading-normal mt-0 mb-2"> {{project.title}}</h1>
+          <p class="text-gray-300 text-base font-light leading-relaxed mt-0 mb-4">{{project.domain}}</p>
+          <div class="flex items-center justify-center">
+            <button class="false flex items-center justify-center gap-1 font-bold outline-none uppercase tracking-wider focus:outline-none focus:shadow-none transition-all duration-300 rounded-full w-10 h-10 p-0 grid place-items-center text-xs leading-normal bg-transparent text-light-blue-500 hover:bg-light-blue-50 hover:text-light-blue-700 hover:bg-light-blue-50 active:bg-light-blue-100 undefined">
+              <i class="fa fa-twitter undefined text-lg"></i>
+            </button>
+            <button class="false flex items-center justify-center gap-1 font-bold outline-none uppercase tracking-wider focus:outline-none focus:shadow-none transition-all duration-300 rounded-full w-10 h-10 p-0 grid place-items-center text-xs leading-normal bg-transparent text-blue-500 hover:bg-blue-50 hover:text-blue-700 hover:bg-blue-50 active:bg-blue-100 undefined">
+              <i class="fa fa-facebook undefined text-lg"></i>
+            </button>
+             <a :href="project.link" target="_blank">
+            <button class="false flex items-center justify-center gap-1 font-bold outline-none uppercase tracking-wider focus:outline-none focus:shadow-none transition-all duration-300 rounded-full w-10 h-10 p-0 grid place-items-center text-xs leading-normal bg-transparent text-pink-500 hover:bg-pink-50 hover:text-pink-700 hover:bg-pink-50 active:bg-pink-100 undefined">
+              <i class="fa fa-link undefined text-lg"></i>
+            </button>
+            </a>
+          </div>
+        </div>
+      </div>
+ 
+
+  
+       
+      
+   
+  </div>
+</div>
+</div>
+ 
+    <div class="card  w-2/5 relative md:m-14  m-16 " v-for="(project , i) in projects" :ref="'card'+i" :key="i">
       <div class="imgBox">
         <img :src="require(`@/assets/img/${project.main}`)" alt />
         <div class="video">
@@ -46,7 +81,6 @@
 
     <!-- component -->
     <div class=" bottomCards mx-auto container md:px-24 px-7 lg:py-20 lg:px-36">
-      <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
       <div class="text-white text-xl lg:text-2xl">
         <h1 class="mb-20">Other Noteworthy Projects</h1>
       </div>
@@ -226,13 +260,12 @@ export default {
     },
    },
   mounted() {
-    this.animate(this.$refs.card0, 0.1);
-    this.animate(this.$refs.card1 ,0.1);
-    this.animate(this.$refs.card2 ,0.1);
+       this.animate(this.$refs.card0, 0.1);
+    this.animate(this.$refs.card1 ,0.3);
+    this.animate(this.$refs.card2 ,0.5);
     this.animate2(".bottomCards" ,  2);
     // this.animate2(this.$refs.smallCard1 , 2.4);
-    // this.animate2(this.$refs.smallCard2 , 3);
-  
+    // this.animate2(this.$refs.smallCard2 , 3)
   },
   methods: {
     animate(element , duration) {
@@ -264,7 +297,8 @@ export default {
             start: "top bottom",
             // end: "center top",
             scrub: false,
-            repeat: -1,
+        once: true
+           ,
             toggleActions: "restart none none reset",
           },
         })

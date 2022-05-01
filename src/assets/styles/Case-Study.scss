@@ -125,3 +125,8 @@
 .project .card .details .content .social-icons a:hover {
   background: #139487;
 }
+@media (max-width: 640px) {
+  .card {
+     display: none;
+ }
+}
