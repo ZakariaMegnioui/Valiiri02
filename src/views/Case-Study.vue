@@ -10,23 +10,14 @@
   <div class="flex flex-wrap" v-for="(project , i) in projects" :ref="'card'+i" :key="i">
     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
       <div class="px-6">
+                     <a :href="project.link" target="_blank">
+
         <img alt="John Doe" :src="require(`@/assets/img/${project.main}`)" class="rounded-xl shadow-lg max-w-full h-auto align-middle border-none ">
+                     </a>
         <div class="pt-6 text-center">
           <h1 class="text-gray-200 text-xl  font-bold leading-normal mt-0 mb-2"> {{project.title}}</h1>
           <p class="text-gray-300 text-base font-light leading-relaxed mt-0 mb-4">{{project.domain}}</p>
-          <div class="flex items-center justify-center">
-            <button class="false flex items-center justify-center gap-1 font-bold outline-none uppercase tracking-wider focus:outline-none focus:shadow-none transition-all duration-300 rounded-full w-10 h-10 p-0 grid place-items-center text-xs leading-normal bg-transparent text-light-blue-500 hover:bg-light-blue-50 hover:text-light-blue-700 hover:bg-light-blue-50 active:bg-light-blue-100 undefined">
-              <i class="fa fa-twitter undefined text-lg"></i>
-            </button>
-            <button class="false flex items-center justify-center gap-1 font-bold outline-none uppercase tracking-wider focus:outline-none focus:shadow-none transition-all duration-300 rounded-full w-10 h-10 p-0 grid place-items-center text-xs leading-normal bg-transparent text-blue-500 hover:bg-blue-50 hover:text-blue-700 hover:bg-blue-50 active:bg-blue-100 undefined">
-              <i class="fa fa-facebook undefined text-lg"></i>
-            </button>
-             <a :href="project.link" target="_blank">
-            <button class="false flex items-center justify-center gap-1 font-bold outline-none uppercase tracking-wider focus:outline-none focus:shadow-none transition-all duration-300 rounded-full w-10 h-10 p-0 grid place-items-center text-xs leading-normal bg-transparent text-pink-500 hover:bg-pink-50 hover:text-pink-700 hover:bg-pink-50 active:bg-pink-100 undefined">
-              <i class="fa fa-link undefined text-lg"></i>
-            </button>
-            </a>
-          </div>
+         
         </div>
       </div>
  
@@ -90,7 +81,7 @@
             v-for="(card , i) in row"
             :ref="'smallCard'+i"
             :key="i"
-            class="w-full hover:scale-105 h-80 flex drop-shadow-xl flex-col justify-between dark:bg-gray-800 bg-white dark:border-gray-700 rounded-lg border border-gray-400 mb-6 py-5 px-4 transition-all duration-100 ease-in-out"
+            class="w-full hover:scale-105 h-80 flex drop-shadow-xl flex-col justify-between bg-gray-800  shadow-md rounded-lg border border-gray-700 mb-6 py-5 px-4 transition-all duration-100 ease-in-out"
           >
             <div>
               <h3
