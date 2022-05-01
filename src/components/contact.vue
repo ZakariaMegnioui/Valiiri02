@@ -10,7 +10,7 @@
             <h1>Zakaria Megnioui</h1>
             <p>Hi, I'm Zakaria Megniouia a Software Developer.</p>
           </aside>
-          
+        
           <button @click="open=!open" :class="open ? 'active' : ''">
             <span>Say Hello</span>
             
