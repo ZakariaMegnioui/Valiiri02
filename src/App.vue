@@ -24,7 +24,7 @@
           <Nav @select="select" />
         </div>
       </div>
-      <header class="w-full md:h-20 h-7 lg:h-2 " :class="setBackground"></header>
+      <header class="w-full md:h-20 h-0 lg:h-2 " :class="setBackground"></header>
       <div id="home">
         <landing-page />
       </div>
@@ -44,7 +44,7 @@
         <ContactView />
       </div>
     </div>
-     <div class="sidebar fixed -right-32 top-72 transform -translate-y-3">
+     <div class="sidebar sm:block xs:hidden fixed -right-32 top-72 transform -translate-y-3">
        <ButtonTab/>
     </div>
   </div>
