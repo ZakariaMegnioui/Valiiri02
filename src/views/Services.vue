@@ -8,7 +8,7 @@
  
 
 <ul class="card_services lg:mb-24 h-full lg:h-5/6">
-  <li class="card " :class="hover_service_card" style="--accent-color: #D00903">
+  <li class="card" :class="hover_service_card" style="--accent-color: #D00903">
     <div class="icon"><i class="fa fa-html5"></i></div>
     <div class="title">Front-end </div>
     <div class="content">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</div>
@@ -36,7 +36,7 @@ export default {
    
      
       hover_service_card:
-        " md:w-2/3 lg:w-1/5 w-full pb-16 lg:pb-0   cursor-pointer  transition ease-in-out delay-150 hover:scale-105   duration-500",
+        " md:w-2/3 lg:w-1/5 w-full  lg:pb-0 pb-24  cursor-pointer  transition ease-in-out delay-150 hover:scale-105   duration-500",
     };
   },
   mounted() {
