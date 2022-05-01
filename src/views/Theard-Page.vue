@@ -29,17 +29,17 @@
         <div class="grid gap-8 md:grid-rows-2 lg:grid-cols-2">
           <div style="background-color: #E5E6EB; display: grid; place-items: center;" class="topOne row-span-2 p-6 border border-gray-100 rounded-xl  text-center sm:p-8" >
             <div class="h-full flex flex-col justify-center space-y-4">
-              <img class="w-20 h-20 mx-auto rounded-full" src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/third_user.webp" alt="user avatar" height="220" width="220" loading="lazy">
+              <img class="w-20 h-20 mx-auto rounded-full" :src="require(`@/assets/img/amine.png`)" alt="user avatar" height="220" width="220" loading="lazy">
               <p class="text-gray-600 md:text-xl"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
               <div>
-                  <h6 class="text-lg font-semibold leading-none">Mouhamed Amine tazmout</h6>
-                  <span class="text-xs text-gray-500">Manager</span>
+                  <h6 class="text-lg font-semibold leading-none">Mohamed amine TZEMMOUT</h6>
+                  <span class="text-xs text-gray-500">CEO AJICOD</span>
               </div>
             </div>
           </div>
 
           <div  style="background-color: #E5E6EB; display: grid; place-items: center;" class="middelOne p-6 border border-gray-100 rounded-xl  sm:flex sm:space-x-8 sm:p-8">
-            <img class="w-20 h-20 mx-auto rounded-full" src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/first_user.webp" alt="user avatar" height="220" width="220" loading="lazy">
+            <img class="w-20 h-20 mx-auto rounded-full" :src="require(`@/assets/img/ali.png`)" alt="user avatar" height="220" width="220" loading="lazy">
             <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
               <p class="text-gray-600"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
               <div>
@@ -49,7 +49,7 @@
             </div>
           </div>
           <div style="background-color: #E5E6EB; display: grid; place-items: center;" class="lastOne p-6 border border-gray-100 rounded-xl  sm:flex sm:space-x-8 sm:p-8">
-            <img class="w-20 h-20 mx-auto rounded-full" src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/third_user.webp" alt="user avatar" height="220" width="220" loading="lazy">
+            <img class="w-20 h-20 mx-auto rounded-full" :src="require(`@/assets/img/mobarak.png`)" alt="user avatar" height="220" width="220" loading="lazy">
             <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
               <p class="text-gray-600"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
               <div>
