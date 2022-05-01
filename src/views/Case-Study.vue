@@ -39,7 +39,7 @@
 </div>
 </div>
  
-    <div class="card  w-2/5 relative md:m-14  m-16 " v-for="(project , i) in projects" :ref="'card'+i" :key="i">
+    <div class="card  w-2/5 relative md:m-14  m-16 " v-for="(project , i) in projects" :class="'card'+i" :key="i">
       <div class="imgBox">
         <img :src="require(`@/assets/img/${project.main}`)" alt />
         <div class="video">
@@ -260,10 +260,10 @@ export default {
     },
    },
   mounted() {
-       this.animate(this.$refs.card0, 0.1);
-    this.animate(this.$refs.card1 ,0.3);
-    this.animate(this.$refs.card2 ,0.5);
-    this.animate2(".bottomCards" ,  2);
+       this.animate('.card0', 0.1);
+    this.animate('.card1',0.1);
+    this.animate('.card2' ,0.1);
+    this.animate2(".bottomCards" ,  0.1);
     // this.animate2(this.$refs.smallCard1 , 2.4);
     // this.animate2(this.$refs.smallCard2 , 3)
   },
