@@ -29,11 +29,11 @@
         <div class="grid gap-8 md:grid-rows-2 lg:grid-cols-2">
           <div style="background-color: #E5E6EB; display: grid; place-items: center;" class="topOne row-span-2 p-6 border border-gray-100 rounded-xl  text-center sm:p-8" >
             <div class="h-full flex flex-col justify-center space-y-4">
-              <img class="w-20 h-20 mx-auto rounded-full" src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/second_user.webp" alt="user avatar" height="220" width="220" loading="lazy">
+              <img class="w-20 h-20 mx-auto rounded-full" src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/third_user.webp" alt="user avatar" height="220" width="220" loading="lazy">
               <p class="text-gray-600 md:text-xl"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
               <div>
-                  <h6 class="text-lg font-semibold leading-none">Jane Doe</h6>
-                  <span class="text-xs text-gray-500">Front-end Developer</span>
+                  <h6 class="text-lg font-semibold leading-none">Mouhamed Amine tazmout</h6>
+                  <span class="text-xs text-gray-500">Manager</span>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@
             <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
               <p class="text-gray-600"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
               <div>
-                  <h6 class="text-lg font-semibold leading-none">Jane Doe</h6>
+                  <h6 class="text-lg font-semibold leading-none">Ali Benlhoucine</h6>
                   <span class="text-xs text-gray-500">Back-end Developer</span>
               </div>
             </div>
@@ -53,8 +53,8 @@
             <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
               <p class="text-gray-600"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
               <div>
-                  <h6 class="text-lg font-semibold leading-none">Jane Doe</h6>
-                  <span class="text-xs text-gray-500">Product Designer</span>
+                  <h6 class="text-lg font-semibold leading-none">M'barek Amehr</h6>
+                  <span class="text-xs text-gray-500">Front-end Developer</span>
               </div>
             </div>
           </div>
