@@ -260,10 +260,10 @@ export default {
     },
    },
   mounted() {
-       this.animate('.card0', 0.1);
-    this.animate('.card1',0.1);
-    this.animate('.card2' ,0.1);
-    this.animate2(".bottomCards" ,  0.1);
+       this.animate('.card', 0.1);
+    // this.animate('.card1',0.1);
+    // this.animate('.card2' ,0.1);
+    this.animate1(".bottomCards" ,  0.1);
     // this.animate2(this.$refs.smallCard1 , 2.4);
     // this.animate2(this.$refs.smallCard2 , 3)
   },
