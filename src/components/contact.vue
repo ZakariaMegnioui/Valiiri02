@@ -2,7 +2,7 @@
   <div class="contact-area " :class="open ? 'active ': ''" >
   <div class="contact md:w-3/6 w-5/6 lg:w-2/6 opacity-100" >
     <main>
-      <section class="dark:bg-gray-800  ">
+      <section class="shadow-md border-gray-700 bg-gray-800  ">
         <div class="content flex md:flex-row flex-col text-center md:text-left  ">
           <img src="@/assets/img/demo.png" class="rounded-full w-20 h-20  " alt="Profile Image">
 
