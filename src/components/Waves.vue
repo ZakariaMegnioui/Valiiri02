@@ -60,17 +60,21 @@
       </div>
       <div class="text-left lg:h-full h-2/3 lg:w-2/3 w-full ml-8 flex justify-center flex-col">
         <h1
-          class="title z-20 name w-4/5 text-2xl md:text-5xl "
+          class="title z-20 name w-4/5 text-2xl md:text-5xl"
           :class="setBackground.primary"
           data-text="Zakaria Megnioui"
         >
           <p class="font-bold mb-2 text-xs md:text-sm md:mb-5" style="color:#139487 ">Hi, my name is</p>Zakaria Megnioui
         </h1>
 
-        <h1 class="title z-20 domain text-2xl md:text-5xl w-4/5  mt-2 md:mt-4" :class="setBackground.sacondary">
+        <h1
+          class="title z-20 domain text-2xl md:text-5xl w-4/5 mt-2 md:mt-4"
+          :class="setBackground.sacondary"
+        >
           I build things for the web.
           <p
-            class="font-bold text-xs md:text-sm  mt-2 md:mt-4" :class="setBackground.sacondary"
+            class="font-bold text-xs md:text-sm mt-2 md:mt-4"
+            :class="setBackground.sacondary"
           >I am a self-taught front and backend developer located in Morocco. I like making fun ,interactive things with code. Well-organized person, problem solver, independent employee with high attention to detail..</p>
         </h1>
 
@@ -111,7 +115,7 @@
           </svg>
           <img
             id="myAvatar"
-            class="w-full h-full duration-500 ease-in-out"
+            class="w-full h-full transition-all duration-500 ease-in-out"
             :src="require(`@/assets/img/avatar${imgIn}.png`)"
             alt
           />
@@ -171,7 +175,6 @@ export default {
   },
   computed: {
     setBackground() {
-
       return this.$store.state.theam;
     },
   },
@@ -222,8 +225,8 @@ export default {
       const items = document.getElementById("myAvatar");
 
       this.move = !this.move;
+       items.classList.add("slide");
       items.classList.remove("slideIn");
-      items.classList.add("slide");
 
       setTimeout(() => {
         items.classList.add("slideIn");
@@ -231,8 +234,8 @@ export default {
         if (this.imgIn == 17) {
           this.imgIn = 0;
         }
-      }, 100);
-      setTimeout(this.change, 8000);
+      }, 300);
+      setTimeout(this.change, 9000);
     },
   },
 };
@@ -242,7 +245,7 @@ export default {
 @import "@/assets/styles/Waves.css";
 
 .home .slide {
-  animation: Out 2s linear;
+  animation: Out 2s forwards;
 }
 .home .slideIn {
   animation: In 1.5s forwards;
@@ -252,6 +255,7 @@ export default {
     transform: translateX(-1000px);
   }
   to {
+    opacity: 1;
     transform: translateX(0px);
   }
 }
@@ -261,6 +265,8 @@ export default {
   }
 
   100% {
+    opacity: 0;
+
     transform: translateX(2000px);
   }
 }
