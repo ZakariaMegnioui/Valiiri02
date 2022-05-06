@@ -225,9 +225,8 @@ export default {
       const items = document.getElementById("myAvatar");
 
       this.move = !this.move;
-       items.classList.add("slide");
+      items.classList.add("slide");
       items.classList.remove("slideIn");
-
       setTimeout(() => {
         items.classList.add("slideIn");
         this.imgIn++;
