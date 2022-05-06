@@ -20,32 +20,49 @@
 
 <script>
 export default {
+  data(){
+    return{
+
+    }
+  },
   methods: {
     setBackground(i) {
       if (i === 0) {
-        this.$store.commit(
-          "SET_BACKGROUND",
-          "bg-gradient-to-r from-indigo-900 via-sky-900 to-blue-900"
-        );
+        this.$store.commit("SET_BACKGROUND", {
+          background: "bg-gradient-to-r from-indigo-900 via-sky-900 to-blue-900",
+          primary: "text-gray-200",
+          sacondary: "text-gray-400",
+        });
       } else if (i === 1) {
         this.$store.commit(
           "SET_BACKGROUND",
-          "bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"
+         { background:"bg-slate-800	",
+          primary: "text-gray-200",
+          sacondary: "text-gray-400",
+         
+         }
         );
       } else if (i === 2) {
         this.$store.commit(
           "SET_BACKGROUND",
-          "bg-gradient-to-l from-gray-700 via-gray-900 to-black"
+         {background: "bg-gradient-to-l from-gray-700 via-gray-900 to-black",
+          primary: "text-gray-200",
+          sacondary: "text-gray-400",}
+
         );
       } else if (i === 3) {
         this.$store.commit(
           "SET_BACKGROUND",
-          "bg-gradient-to-r from-cyan-900 via-teal-900 to-cyan-900"
+         {background: "bg-indigo-900",
+          primary: "text-gray-200",
+          sacondary: "text-gray-400",}
         );
-      }else {
-            this.$store.commit(
+      } else {
+        this.$store.commit(
           "SET_BACKGROUND",
-          "bg-gradient-to-r from-neutral-800 via-neutral-800 to-neutral-800"
+        { background: "bg-slate-900	",
+          primary: "text-gray-200",
+          sacondary: "text-gray-400",}
         );
       }
     },

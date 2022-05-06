@@ -1,5 +1,5 @@
 <template>
-  <div class="contact_main overflow-hidden" :class="setBackground">
+  <div class="contact_main overflow-hidden" :class="setBackground.background">
     <div class="header h-36 w-3/4 md:w-1/2 m-auto">
       <h1 class="text-2xl lg:text-4xl text-white mb-6">Get In Touch</h1>
       <p
@@ -32,7 +32,7 @@ export default {
     setBackground() {
       //  this.$store.commit('user/SET_DIALOG', false)
 
-      return this.$store.state.background;
+      return this.$store.state.theam;
     },
   },
   mounted() {

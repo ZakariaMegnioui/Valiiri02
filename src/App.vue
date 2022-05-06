@@ -1,7 +1,7 @@
 <template>
   <div id="app">
    
-    <div class="intro" :class="setBackground">
+    <div class="intro" :class="setBackground.background">
       <Intro />
  
      
@@ -24,7 +24,7 @@
           <Nav @select="select" />
         </div>
       </div>
-      <header class="w-full md:h-20 h-0 lg:h-2 " :class="setBackground"></header>
+      <header class="w-full md:h-20 h-0 lg:h-2 " :class="setBackground.background"></header>
       <div id="home">
         <landing-page />
       </div>
@@ -93,7 +93,7 @@ export default {
   computed: {
     setBackground() {
       //  this.$store.commit('user/SET_DIALOG', false)
-      return this.$store.state.background;
+      return this.$store.state.theam;
     },
   },
   mounted() {

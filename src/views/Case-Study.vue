@@ -1,5 +1,5 @@
 <template>
-  <div class="project" :class="setBackground">
+  <div class="project" :class="setBackground.background">
     <div class="flex lg:text-9xl md:text-7xl text-6xl h-28 justify-between w-full opacity-20">
       <h1 class="w-1/2 text-left text-gray-500">Work</h1>
       <h1 class="w-1/2 text-right" style="color:#139487">03</h1>
@@ -247,16 +247,14 @@ export default {
    computed: {
     setBackground() {
 
-      return this.$store.state.background;
+      return this.$store.state.theam;
     },
    },
   mounted() {
        this.animate('.card', 0.1);
-    // this.animate('.card1',0.1);
-    // this.animate('.card2' ,0.1);
-    this.animate1(".bottomCards" ,  0.1);
-    // this.animate2(this.$refs.smallCard1 , 2.4);
-    // this.animate2(this.$refs.smallCard2 , 3)
+   
+    this.animate2(".bottomCards" ,  0.1);
+   
   },
   methods: {
     animate(element , duration) {

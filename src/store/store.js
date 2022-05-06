@@ -4,12 +4,16 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    background: 'bg-gradient-to-l from-purple-900 via-indigo-800 to-indigo-900'
+    theam:{
+     background: 'bg-gradient-to-l from-purple-900 via-indigo-800 to-indigo-900',
+     primary:'text-gray-200',
+     sacondary:'text-gray-400'
+    }
   },
   
   mutations : {
     SET_BACKGROUND: (state, color) => {
-      state.background = color;
+      state.theam = color;
     }
   }
 })

@@ -3,11 +3,11 @@
     <section class="section top-section flex flex-col align-middle justify-center">
       <div
         class="circel number2 lg:h-80 lg:w-80 md:w-60 w-32 md:h-60 rounded-full absolute -top-5 right-0"
-        :class="setBackground"
+        :class="setBackground.background"
       ></div>
       <div
         class="circel number1 lg:h-80 lg:w-80 md:w-60 w-32 md:h-60 rounded-full absolute bottom-0 left-0"
-        :class="setBackground"
+        :class="setBackground.background"
       ></div>
       <div class="content-container content-theme-light">
         <div class="content-inner">
@@ -22,7 +22,7 @@
       </div>
     </section>
 
-    <section class="section bottom-section" :class="setBackground">
+    <section class="section bottom-section" :class="setBackground.background">
       <div
         class="circel number3 h-80 w-80 rounded-full absolute -bottom-20 left-0"
         style="background:#efefef; "
@@ -68,7 +68,7 @@ export default {
     setBackground() {
       //  this.$store.commit('user/SET_DIALOG', false)
 
-      return this.$store.state.background;
+      return this.$store.state.theam;
     },
   },
   mounted() {

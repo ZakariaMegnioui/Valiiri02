@@ -1,5 +1,5 @@
 <template>
-  <div class="main flex flex-col" :class="setBackground">
+  <div class="main flex flex-col" :class="setBackground.background">
     <!--Hey! This is the original version
     of Simple CSS Waves-->
 
@@ -60,16 +60,17 @@
       </div>
       <div class="text-left lg:h-full h-2/3 lg:w-2/3 w-full ml-8 flex justify-center flex-col">
         <h1
-          class="title z-20 name w-4/5 text-2xl md:text-5xl text-gray-400"
+          class="title z-20 name w-4/5 text-2xl md:text-5xl "
+          :class="setBackground.primary"
           data-text="Zakaria Megnioui"
         >
           <p class="font-bold mb-2 text-xs md:text-sm md:mb-5" style="color:#139487 ">Hi, my name is</p>Zakaria Megnioui
         </h1>
 
-        <h1 class="title z-20 domain text-2xl md:text-5xl w-4/5 text-gray-500 mt-2 md:mt-4">
+        <h1 class="title z-20 domain text-2xl md:text-5xl w-4/5  mt-2 md:mt-4" :class="setBackground.sacondary">
           I build things for the web.
           <p
-            class="font-bold text-xs md:text-sm text-gray-500 mt-2 md:mt-4"
+            class="font-bold text-xs md:text-sm  mt-2 md:mt-4" :class="setBackground.sacondary"
           >I am a self-taught front and backend developer located in Morocco. I like making fun ,interactive things with code. Well-organized person, problem solver, independent employee with high attention to detail..</p>
         </h1>
 
@@ -121,7 +122,7 @@
     <div class="bottom w-full hidden md:block" style="height :20vh;">
       <svg
         class="waves"
-        :class="setBackground"
+        :class="setBackground.background"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 24 150 28"
@@ -166,13 +167,12 @@ export default {
     return {
       imgIn: 1,
       move: false,
-      background: "",
     };
   },
   computed: {
     setBackground() {
 
-      return this.$store.state.background;
+      return this.$store.state.theam;
     },
   },
   mounted() {
