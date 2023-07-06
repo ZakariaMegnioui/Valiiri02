@@ -4,6 +4,7 @@
       <h1 class="w-1/2 text-left text-gray-500">Work</h1>
       <h1 class="w-1/2 text-right" style="color:#139487">03</h1>
     </div>
+    <NewProject/>
     <div class="card w-2/5 relative md:m-14  m-16" v-for="(project , i) in projects" :ref="'card'+i" :key="i">
       <div class="imgBox">
         <img :src="require(`@/assets/img/${project.main}`)" alt />
@@ -109,8 +110,10 @@
 
 <script>
 import { gsap } from "gsap";
+import NewProject from '@/components/NewProject.vue'
 export default {
   name: "casestudy",
+  components:{NewProject},
   data() {
     return {
       link: require("@/assets/icons/link.svg"),
