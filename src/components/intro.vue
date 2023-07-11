@@ -113,7 +113,7 @@ export default {
 <style scoped>
 
 .macbook {
-  width: 150px;
+  width: 100%;
   height: 96px;
   position: absolute;
   left: 50%;
