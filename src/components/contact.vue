@@ -83,25 +83,25 @@ export default {
     },
     mounted(){
    gsap
-        .timeline({
-          // yes, we can add it to an entire timeline!
-          scrollTrigger: {
-            trigger: ".contact",
-            start: "top bottom",
-            // end: "center top",
-            scrub: false,
-            repeat: -1,
-            toggleActions: "restart none none reset",
-          },
-        })
+        // .timeline({
+        //   // yes, we can add it to an entire timeline!
+        //   scrollTrigger: {
+        //     trigger: ".contact",
+        //     start: "top bottom",
+        //     // end: "center top",
+        //     scrub: false,
+        //     repeat: -1,
+        //     toggleActions: "restart none none reset",
+        //   },
+        // })
          
-         .from(".contact", {
-          opacity:0,
+        //  .from(".contact", {
+        //   opacity:0,
            
-          duration: 2,
-          delay: 1,
-          ease: "back",
-        });
+        //   duration: 2,
+        //   delay: 1,
+        //   ease: "back",
+        // });
     },
   methods:{
     //  contect(){
