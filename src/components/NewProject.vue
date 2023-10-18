@@ -1,84 +1,89 @@
 <template>
- 
-<div>
+    <div>
+        <h5 class="mb-11 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      New Projects</h5>
     
-    <div class="row removable">
-                <div class="col-lg-4">
-                    <div class="card mb-4">
-                        <div class="card-header p-3">
-                            <img src="https://images.unsplash.com/photo-1639503611585-1054af5dbfab?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="w-100 border-radius-md">
-                            <span class="badge bg-secondary position-absolute top-8 start-8">24h 30m 12s</span>
-                        </div>
-                        <div class="card-body pt-2">
-                            <div class="d-flex align-items-center mb-4">
-                                <div>
-                                    <h5 class="font-weight-bolder mb-0">The Heart of Hero</h5>
-                                    <p class="text-sm mb-0">By <span class="text-secondary">Anthoine Reauseu</span></p>
-                                </div>
-                                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydHJhaXR8ZW58MHwyfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="avatar ms-auto">
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:;" class="btn btn-sm btn-info mb-0">Place a bid</a>
-                                <p class="mb-0 ms-auto"><span class="text-dark">0.34</span> ETH</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card mb-4">
-                        <div class="card-header p-3">
-                            <img src="https://images.unsplash.com/photo-1638803040283-7a5ffd48dad5?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="w-100 border-radius-md">
-                            <span class="badge bg-secondary position-absolute top-8 start-8">22h 29m 28s</span>
-                        </div>
-                        <div class="card-body pt-2">
-                            <div class="d-flex align-items-center mb-4">
-                                <div>
-                                    <h5 class="font-weight-bolder mb-0">Monster of Venice</h5>
-                                    <p class="text-sm mb-0">By <span class="text-secondary">Juliette Moreau</span></p>
-                                </div>
-                                <img src="https://images.unsplash.com/photo-1518991669955-9c7e78ec80ca?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cG9ydHJhaXR8ZW58MHwyfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="avatar ms-auto">
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:;" class="btn btn-sm btn-info mb-0">Place a bid</a>
-                                <p class="mb-0 ms-auto"><span class="text-dark">0.09</span> ETH</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card mb-4">
-                        <div class="card-header p-3">
-                            <img src="https://images.unsplash.com/photo-1639628735078-ed2f038a193e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="w-100 border-radius-md">
-                            <span class="badge bg-secondary position-absolute top-8 start-8">21h 12m 03s</span>
-                        </div>
-                        <div class="card-body pt-2">
-                            <div class="d-flex align-items-center mb-4">
-                                <div>
-                                    <h5 class="font-weight-bolder mb-0">Toys Friends</h5>
-                                    <p class="text-sm mb-0">By <span class="text-secondary">Aliece Froielle</span></p>
-                                </div>
-                                <img src="https://images.unsplash.com/photo-1514960919797-5ff58c52e5ba?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHBvcnRyYWl0fGVufDB8MnwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="avatar ms-auto">
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:;" class="btn btn-sm btn-info mb-0">Place a bid</a>
-                                <p class="mb-0 ms-auto"><span class="text-dark">0.45</span> ETH</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-14 ">
 
+        <div v-for="(item, index) in projects" :key="index"
+            class=" max-w-sm border rounded-lg shadow bg-gray-800 border-gray-700">
+            <a href="#">
+             
+                <img class="rounded-t-lg w-full h-72 " :src="require(`@/assets/img/${item.image}`)" alt="" />
+            </a>
+            <div class="p-5 ">
+                <a href="#">
+                    <h5 class="my-4 transform translate-y-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                       {{item.title}}</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    {{ item.desciption }}
+                </p>
+                <a :href="item.link"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Read more
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <h5 class="my-11 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      Old Projects</h5>
 </div>
-  </template>
+</template>
   
-  <script>
-  export default {
-      name: 'Project',
+<script>
+export default {
+    name: 'Project',
   
-  
+      data() {
+    return {
+        projects: [
+        {
+            title: "Elmanat",
+            domain: "E-Learning",
+            image: "elmanat.jpg",
+            link: "https://elmanat.com/",
+            desciption: "Elmanat.com: Vue.js & Laravel for Udemy-like E-Learning. Diverse courses, seamless experience! 🚀"
+        },
+        {
+            title: "Framcha",
+            domain: "delivery agency",
+            image: "framcha.jpg",
+            link: "https://framcha.ma/",
+            desciption: "Framcha.com is a Vue.js and Laravel-based delivery agency web app for efficient delivery management and tracking."
+        },
+        {
+            title: "Tamo7a",
+            domain: "hierarchical marketing",
+            image: "tamo7aa.jpg",
+            link: "https://framcha.ma/",
+            desciption: "Tamo7a is a Vue.js and Laravel-based ecommerce system designed for hierarchical marketing, providing businesses with a platform to sell products through a network of distributors or affiliates."
+        },
+        {
+            title: "Lobus",
+            domain: "ransport system",
+            image: "bus.jpg",
+            link: "https://lobus.ma/",
+            desciption: "Lobuse is a Vue.js and Laravel-based transport system designed for Torresm, streamlining and optimizing transportation operations for efficient delivery management."
+        },
+        {
+            title: "Madera",
+            domain: "ransport system",
+            image: "madera.jpg",
+            link: "https://dashboard.maderadeco.ma/",
+            desciption: "🚀 Vue.js & Laravel power Maderadeco.ma's stock management. 🌐🖥️ Real-time tracking, 🛡️ secure processing, 💼 collaborative excellence!" 
+},
+      ],
+     
   }
-  </script>
+}
+}
+</script>
   
-  <style  scoped>
-  </style>
+<style  scoped></style>
   
